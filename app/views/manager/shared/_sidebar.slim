@@ -1,0 +1,23 @@
+ul#accordionSidebar.navbar-nav.bg-gradient-primary.sidebar.sidebar-dark.accordion
+  = link_to manager_root_path, class: "sidebar-brand d-flex align-items-center justify-content-center"
+    .sidebar-brand-icon.rotate-n-15
+      i.fas.fa-user-tie
+    .sidebar-brand-text.mx-3
+      | Administrator
+  hr.sidebar-divider.my-0/
+  li.nav-item
+    a.nav-link href="#" 
+      i.fas.fa-fw.fa-tachometer-alt
+      span Dashboard
+  hr.sidebar-divider/
+  .sidebar-heading
+    | Management
+  li.nav-item
+    a.nav-link.collapsed aria-controls="collapseTwo" aria-expanded="true" data-target="#collapseTwo" data-toggle="collapse" href="#" 
+      i.fas.fa-film
+      span Movies
+    #collapseTwo.collapse aria-labelledby="headingTwo" data-parent="#accordionSidebar" 
+      .bg-white.py-2.collapse-inner.rounded
+        a.collapse-item Something 1
+        a.collapse-item Something 2
+  hr.sidebar-divider.d-none.d-md-block/
