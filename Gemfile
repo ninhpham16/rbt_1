@@ -21,6 +21,7 @@ gem "jquery-rails"
 gem "font-awesome-sass", "~> 5.8.1"
 gem "kaminari" 
 gem "bootstrap-kaminari-views"
+gem "devise"
 group :development, :test do
   gem "pry-rails"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

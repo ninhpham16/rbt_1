@@ -9,9 +9,18 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *= require ./../lib/sb-admin-2
+
  *= require_self
  *= require manager/category.scss
+ *= require lib/animate
+ *= require lib/animsition.min
+ *= require lib/daterangepicker
+ *= require lib/hamburgers.min
+ *= require lib/main
+ *= require lib/material-design-iconic-font.min
+ *= require lib/select2.min
+ *= require lib/util
+ *= require lib/sb-admin-2
  */
 
  @import "font-awesome-sprockets";
