@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   namespace :manager do
     root "static_pages#index"
-  end
+    resources :categories
+  end  
 end

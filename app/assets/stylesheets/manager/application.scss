@@ -11,7 +11,9 @@
  * It is generally better to create a new file per style scope.
  *= require ./../lib/sb-admin-2
  *= require_self
+ *= require manager/category.scss
  */
 
  @import "font-awesome-sprockets";
  @import "font-awesome";
+ @import "bootstrap";

@@ -22,3 +22,23 @@ en:
       res_now: "Reserve now"
       onstage: "Onstage Movies"
       notice: "All those movies are available now on our theaters"
+  
+  manager:
+    categories:
+      new:
+        title: "Create Category"
+        button: "Create"
+      edit:
+        title: "Edit Category"
+        button: "Update"
+      index:
+        title: "List categories"
+        th1: "Category"
+        th2: "Action"
+        confirm: "Are you sure ?"
+
+  controllers:
+    manager:
+      categories:
+        success: "Successfully"
+        error: "Error"
