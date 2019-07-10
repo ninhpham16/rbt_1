@@ -9,4 +9,5 @@ devise_for :admins, controllers: {
     root "static_pages#index"
     resources :categories
   end  
+  resources :movies, only: [:show]
 end

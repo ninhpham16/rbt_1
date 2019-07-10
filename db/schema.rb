@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_09_025600) do
+ActiveRecord::Schema.define(version: 2019_07_10_025405) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -52,6 +52,17 @@ ActiveRecord::Schema.define(version: 2019_07_09_025600) do
     t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "director"
+    t.string "actor"
+    t.datetime "release"
+    t.integer "duration"
+    t.string "rated"
+    t.string "trailer"
+    t.string "description"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.bigint "image_file_size"
+    t.datetime "image_updated_at"
     t.index ["category_id"], name: "index_movies_on_category_id"
   end
 
@@ -100,11 +111,8 @@ ActiveRecord::Schema.define(version: 2019_07_09_025600) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "user_name"
+    t.string "name"
     t.string "email"
-    t.string "full_name"
-    t.string "phone_number"
-    t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
