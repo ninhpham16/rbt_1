@@ -10,6 +10,10 @@ html
       #content-wrapper.d-flex.flex-column
         #content
           = render "manager/shared/header"
+          - flash.each do |f|
+            - type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info')
+            javascript:
+              toastr["#{type}"]("#{f[1]}")
           = yield
         footer.sticky-footer.bg-white
           = render "manager/shared/footer"

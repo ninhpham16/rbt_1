@@ -20,3 +20,4 @@
 //= require lib/main
 //= require lib/select2.min
 //= require lib/moment.min
+//= require toastr
