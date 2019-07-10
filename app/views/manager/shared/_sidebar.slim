@@ -24,4 +24,12 @@ ul#accordionSidebar.navbar-nav.bg-gradient-primary.sidebar.sidebar-dark.accordio
       .bg-white.py-2.collapse-inner.rounded
         a.collapse-item Something 1
         a.collapse-item Something 2
+  li.nav-item
+    = link_to manager_categories_path, class: "nav-link collapsed" do
+      i.fas.fa-book 
+      span Categories
+  li.nav-item
+    = link_to manager_cities_path, class: "nav-link collapsed" do
+      i.fas.fa-globe 
+      span Cities
   hr.sidebar-divider.d-none.d-md-block/

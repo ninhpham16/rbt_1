@@ -47,9 +47,25 @@ en:
         th1: "Category"
         th2: "Action"
         confirm: "Are you sure ?"
-
-  controllers:
-    manager:
-      categories:
+      create:
         success: "Successfully"
-        error: "Error"
+    cities:
+      create:
+        success: "Successfully"
+      new:
+        title: "Create City"
+        button: "Create"
+      edit:
+        title: "Edit City"
+        button: "Update"
+      index:
+        title: "List Cities"
+        th1: "City"
+        th2: "Action"
+        confirm: "Are you sure ?"
+        edit: "Edit"
+        add: "Add city"
+        delete: "Delete"
+
+
+
