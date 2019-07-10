@@ -1,0 +1,31 @@
+.col-md-9.col-md-offset-3
+  = form_for [:manager, @movie] do |f|
+    . 
+      = f.label :name, t(".name")
+      = f.text_field :name, class: "form-control"
+    hr
+      .
+        = f.label :category_id
+        = f.collection_select :category_id, @categories, :id, :name, :prompt => t(".select")
+    .
+      = f.label :director, t(".director")
+      = f.text_field :director, class: "form-control"
+    .
+      = f.label :actor, t(".actor")
+      = f.text_field :actor, class: "form-control"
+    .
+      = f.label :release, t(".release")
+      = f.datetime_select :release, class: "form-control"
+    .
+      = f.label :rated, t(".rated")
+      = f.text_field :rated, class: "form-control"
+    .
+      = f.label :trailer, t(".trailer")
+      = f.text_field :trailer, class: "form-control"
+    .
+      = f.label :description, t(".descrip")
+      = f.text_field :description, class: "form-control"
+    .
+      = f.label :image, t(".image")
+      = f.file_field :image, class: "form-control"
+    = f.submit t(".create"), class: "btn btn-primary"
