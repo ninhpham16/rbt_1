@@ -1,7 +1,7 @@
 .limiter
   .container-login100 style=("background-image: url('images/bg-01.jpg');") 
     .wrap-login100
-      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      = form_for(resource, url: session_path(resource)) do |f|
         span.login100-form-logo
           i.fab.fa-accusoft aria-hidden="true" 
         span.login100-form-title.p-b-34.p-t-27
