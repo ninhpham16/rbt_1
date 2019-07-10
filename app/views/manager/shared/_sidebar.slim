@@ -13,6 +13,10 @@ ul#accordionSidebar.navbar-nav.bg-gradient-primary.sidebar.sidebar-dark.accordio
   .sidebar-heading
     | Management
   li.nav-item
+    = link_to manager_users_path, class: "nav-link"
+      i.fas.fa-fw.fa-tachometer-alt      
+      span Users        
+  li.nav-item
     a.nav-link.collapsed aria-controls="collapseTwo" aria-expanded="true" data-target="#collapseTwo" data-toggle="collapse" href="#" 
       i.fas.fa-film
       span Movies

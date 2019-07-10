@@ -2001,7 +2001,6 @@ pre code {
 .table-responsive {
   display: block;
   width: 100%;
-  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -10373,6 +10372,7 @@ button.bg-dark:focus {
 
 .text-primary {
   color: #4e73df !important;
+  font-size: 25px;
 }
 
 a.text-primary:hover, a.text-primary:focus {

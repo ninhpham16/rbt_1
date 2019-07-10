@@ -8,6 +8,7 @@ devise_for :admins, controllers: {
   namespace :manager do
     root "static_pages#index"
     resources :categories
+    resources :users
   end  
   resources :movies, only: [:show]
 end
