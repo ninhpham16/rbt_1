@@ -24,6 +24,7 @@ gem "bootstrap-kaminari-views"
 gem "devise"
 gem "paperclip"
 group :development, :test do
+  gem "faker"
   gem "pry-rails"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
 end
