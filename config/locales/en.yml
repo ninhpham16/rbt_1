@@ -49,23 +49,25 @@ en:
         confirm: "Are you sure ?"
       create:
         success: "Successfully"
+    movies:
+      new:
+        title: "Create new Movies"
+        success: "Success"
+        fails: "Fail"
+      form:
+        name: "Name"
+        director: "Director"
+        actor: "Actor"
+        release: "Release"
+        rated: "Rated"
+        trailer: "Trailer"
+        descrip: "Descripetion"
+        image: "Image"
+        select: "Select a category"
+        create: "Create a new Movie"
     cities:
       create:
-        success: "Successfully"
-      new:
-        title: "Create City"
-        button: "Create"
-      edit:
-        title: "Edit City"
-        button: "Update"
-      index:
-        title: "List Cities"
-        th1: "City"
-        th2: "Action"
-        confirm: "Are you sure ?"
-        edit: "Edit"
-        add: "Add city"
-        delete: "Delete"
-
-
+    shared:
+      _sidebar:
+        create_movie: "Create Movie"
 

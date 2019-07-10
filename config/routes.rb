@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :categories
     resources :users
     resources :cities
+    resources :movies
   end  
   resources :movies, only: [:show]
 end

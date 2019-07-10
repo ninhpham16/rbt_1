@@ -22,8 +22,7 @@ ul#accordionSidebar.navbar-nav.bg-gradient-primary.sidebar.sidebar-dark.accordio
       span Movies
     #collapseTwo.collapse aria-labelledby="headingTwo" data-parent="#accordionSidebar" 
       .bg-white.py-2.collapse-inner.rounded
-        a.collapse-item Something 1
-        a.collapse-item Something 2
+        = link_to t(".create_movie"), new_manager_movie_path
   li.nav-item
     = link_to manager_categories_path, class: "nav-link collapsed" do
       i.fas.fa-book 
