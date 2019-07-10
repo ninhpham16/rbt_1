@@ -23,6 +23,17 @@ en:
       onstage: "Onstage Movies"
       notice: "All those movies are available now on our theaters"
   
+  movies:
+    show:
+      director: "Director: "
+      category: "Category: "
+      actor: "Actor: "
+      release: "Release: "
+      rated: "Rated: "
+      descrip: "Description: "
+      trailer: "Trailer"
+      book: "Book Tickets"
+  
   manager:
     categories:
       new:

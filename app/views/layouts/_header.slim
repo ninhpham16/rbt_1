@@ -1,22 +1,23 @@
-nav.gtco-nav role="navigation" 
-  .gtco-container
-    .row
-      .col-sm-4.col-xs-12
-        #gtco-logo
-          a href="#" 
-            = t ".web_name"
-            em .
-      .col-xs-8.text-right.menu-1
-        ul
-          li
-            a href="#"  = t ".menu"
-          li.has-dropdown
-            a href="#"  = t ".service"
-            ul.dropdown
-              li
-                a href="#" = t ".option"
-          li
-            a href="#" = t ".contact"
-          li.btn-cta
+header#gtco-footer data-stellar-background-ratio="0.5" role="contentinfo" 
+  nav.gtco-nav role="navigation" 
+    .gtco-container
+      .row
+        .col-sm-4.col-xs-12
+          #gtco-logo
             a href="#" 
-              span = t ".reservation"
+              = t ".web_name"
+              em .
+        .col-xs-8.text-right.menu-1
+          ul
+            li
+              a href="#"  = t ".menu"
+            li.has-dropdown
+              a href="#"  = t ".service"
+              ul.dropdown
+                li
+                  a href="#" = t ".option"
+            li
+              a href="#" = t ".contact"
+            li.btn-cta
+              a href="#" 
+                span = t ".reservation"

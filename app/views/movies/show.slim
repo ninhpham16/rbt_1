@@ -1,0 +1,34 @@
+center
+  h1 = @movie.name
+.container
+  .col-md-4
+    = image_tag "toy.jpg"
+  .col-md-8
+    h3 
+      strong 
+        = t ".director"
+      = @movie.director
+    h3
+      strong 
+        = t ".category"
+      = @movie.category.name
+    h3
+      strong 
+        = t ".actor"
+      = @movie.actor
+    h3
+      strong 
+        = t ".release"
+      = @movie.release
+    h3
+      strong 
+        = t "rated"
+      = @movie.rated
+    h3 
+      strong 
+        = t ".descrip"
+      =@movie.description
+    .col-md-2
+      = link_to t(".trailer"),"#", class: "btn btn-danger"
+    .col-md-3
+      = link_to t(".book"),"#", class: "btn btn-success"
