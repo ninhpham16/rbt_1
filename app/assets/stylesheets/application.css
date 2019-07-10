@@ -12,4 +12,6 @@
  *
  *= require_tree .
  *= require_self
+ *= require lib/material-design-iconic-font1.min
+ *= require lib/style
  */

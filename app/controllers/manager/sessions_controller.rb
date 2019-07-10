@@ -1,5 +1,6 @@
 module Manager
   class SessionsController < Devise::SessionsController
+    layout "layoutlogin"
 
     def after_sign_in_path_for(resource)
       manager_root_path

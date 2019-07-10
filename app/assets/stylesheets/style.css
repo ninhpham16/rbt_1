@@ -45,7 +45,7 @@ body {
 }
 
 a {
-  color: #FBB448;
+  color: #f30909;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -61,6 +61,8 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6, figure {
+  text-align: center;
+  font-size: 35px;
   color: #000;
   font-family: "Lato", Arial, sans-serif;
   font-weight: 400;
@@ -1495,6 +1497,8 @@ form label {
   box-shadow: none;
   background: transparent;
   border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  color: black;
   height: 46px;
   font-size: 16px;
   font-weight: 300;

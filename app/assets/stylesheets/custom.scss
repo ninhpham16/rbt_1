@@ -55,3 +55,27 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
 }
+
+.content-1 {
+  width: 39%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 35px !important;
+}
+
+.change_profile {
+  text-align: center;
+  font-size: 18px;
+}
+
+.container.details {
+  padding-bottom: 65px;
+}
+
+.form-group.col-md-12 {
+  color: black;
+}
+
+.container#form-group {
+  max-width: 150%;
+}
