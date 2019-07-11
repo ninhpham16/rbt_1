@@ -1,0 +1,14 @@
+.container.index-categories
+  h1 = t".title"
+  
+  table.table.table-condensed
+    thead
+      tr
+        th = t".th1"
+        th = t".th2"
+    tbody#category-body
+      = render partial: "category", collection: @categories, as: :category
+    table
+      = link_to t(".button"), new_manager_category_path, remote: true, class: "btn btn-success"
+= paginate @categories, theme: "twitter-bootstrap-4"
+#categoryIndexModal
