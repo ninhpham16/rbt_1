@@ -70,4 +70,42 @@ en:
     shared:
       _sidebar:
         create_movie: "Create Movie"
-
+        success: "Successfully"
+      new:
+        title: "Create City"
+        button: "Create"
+      edit:
+        title: "Edit City"
+        button: "Update"
+      index:
+        title: "List Cities"
+        th1: "City"
+        th2: "Action"
+        confirm: "Are you sure ?"
+        edit: "Edit"
+        add: "Add city"
+        delete: "Delete"
+    rooms:
+      create:
+        success: "Success"
+        failed: "Failed"
+      update:
+        success: "Success"
+        failed: "Failed"
+      destroy:
+        success: "Success"
+      index:
+        title: "List room"
+        id: "ID"
+        nor: "Name of Room"
+        theater: "Theater"
+        city: "City"
+        action: "Action"
+        edit: "Edit"
+        delete: "Delete"
+      edit:
+        update: "Update"
+        edt-room: "Edit room"
+      new:
+        title: "Create Room"
+        button: "Create"

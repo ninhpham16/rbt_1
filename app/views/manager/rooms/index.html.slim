@@ -1,0 +1,32 @@
+.container
+  h1
+    | List room
+  table.table
+    thead
+      tr
+        th
+          = t".id"
+        th
+          = t ".nor"
+        th
+          = t".theater"
+        th
+          = t".city"
+        th
+          = t".action"
+    tbody
+      - @rooms.each do |room|
+        tr
+          td
+            = room.id
+          td
+            = room.name
+          td
+            = room.theater.name
+          td
+            = room.theater.city.name
+          td
+            = link_to "Edit", edit_manager_room_path(room), class: "btn btn-primary"
+            = link_to "Delete", manager_room_path(room), method: :delete, data: { confirm: "Are you sure"}, class: "btn btn-danger"
+  = link_to "Create room", new_manager_room_path, class: "btn btn-primary"
+= paginate @rooms, theme: "twitter-bootstrap-4"
