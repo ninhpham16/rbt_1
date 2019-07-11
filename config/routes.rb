@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     resources :users
     resources :cities
     resources :movies
+    resources :rooms
   end  
   resources :movies, only: [:show]
 end

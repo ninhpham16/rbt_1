@@ -28,6 +28,10 @@ ul#accordionSidebar.navbar-nav.bg-gradient-primary.sidebar.sidebar-dark.accordio
       i.fas.fa-book 
       span Categories
   li.nav-item
+    = link_to manager_rooms_path, class: "nav-link collapsed" do
+      i.fas.fa-book 
+      span Rooms
+  li.nav-item
     = link_to manager_cities_path, class: "nav-link collapsed" do
       i.fas.fa-globe 
       span Cities

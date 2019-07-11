@@ -11,6 +11,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require rails-ujs
+//= require turbolinks
 //= require lib/jquery-3.2.1.min
 //= require lib/animsition.min
 //= require lib/bootstrap.bundle.min
