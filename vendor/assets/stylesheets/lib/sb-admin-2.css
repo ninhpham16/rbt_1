@@ -1671,7 +1671,8 @@ pre code {
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: #858796;
+  color: #040404;
+  margin: 0 auto;
 }
 
 .table th,
@@ -8569,7 +8570,7 @@ button.bg-dark:focus {
 
 .mr-5,
 .mx-5 {
-  margin-right: 3rem !important;
+  margin-right: 2rem !important;
 }
 
 .mb-5,

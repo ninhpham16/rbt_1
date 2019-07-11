@@ -1,4 +1,5 @@
 class City < ApplicationRecord
-  has_many :theater, dependent: :destroy
+  has_many :theaters, dependent: :destroy
+
   validates :name, presence: true, uniqueness: true
 end
