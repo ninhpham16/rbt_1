@@ -34,6 +34,19 @@ en:
       trailer: "Trailer"
       book: "Book Tickets"
   
+  users:
+    edit:
+      profile: "Edit Profile"
+      name: "Full name"
+      phone: "Phone number"
+      email: "Email"
+      address: "Address"
+      password: "New password"
+      confirm: "Confirm password"
+      update: "Update"
+    show:
+      edit: "Edit"
+
   manager:
     categories:
       new:

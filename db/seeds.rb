@@ -17,8 +17,10 @@ user = User.create!(name: "Winfrey",
 50.times do |n|
 name  = Faker::Name.name
 email = "ex-#{n+1}@gmail.com"
+password = "123456"
 User.create!(name: name,
             email: email,
+            password: password,
             full_name: "Oprah Winfrey",
             phone_number: "0964980884",
             address: "America",
