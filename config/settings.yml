@@ -2,3 +2,4 @@ amount_movie_index: 6
 per_page_categories: 5
 per_page_cities: 10
 per_page_rooms: 5
+per_page_movies: 10

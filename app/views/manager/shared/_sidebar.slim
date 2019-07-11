@@ -15,14 +15,11 @@ ul#accordionSidebar.navbar-nav.bg-gradient-primary.sidebar.sidebar-dark.accordio
   li.nav-item
     = link_to manager_users_path, class: "nav-link"
       i.fas.fa-fw.fa-tachometer-alt      
-      span Users        
+      span Users 
   li.nav-item
-    a.nav-link.collapsed aria-controls="collapseTwo" aria-expanded="true" data-target="#collapseTwo" data-toggle="collapse" href="#" 
-      i.fas.fa-film
+    = link_to manager_movies_path, class: "nav-link collapsed" do
+      i.fas.fa-film 
       span Movies
-    #collapseTwo.collapse aria-labelledby="headingTwo" data-parent="#accordionSidebar" 
-      .bg-white.py-2.collapse-inner.rounded
-        = link_to t(".create_movie"), new_manager_movie_path
   li.nav-item
     = link_to manager_categories_path, class: "nav-link collapsed" do
       i.fas.fa-book 
