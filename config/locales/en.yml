@@ -8,6 +8,7 @@ en:
       contact: "Contact"
       reservation: "Reservation"
       city: "Cities"
+      search: "Search..."
     footer:
       get: "Get in Touch"
       live: "Chat live"
