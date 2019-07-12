@@ -1,0 +1,3 @@
+$("#category-body").html("<%= j render partial: "category", collection: @categories %>");
+$("#categoryModalNew").modal("hide");
+toastr["success"]("Add successfully!");

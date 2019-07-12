@@ -12,7 +12,7 @@
   background: #FFFFFF;
   max-width: 360px;
   margin: 0 auto 100px;
-  padding: 45px;
+  padding: 24px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
@@ -27,6 +27,9 @@
   box-sizing: border-box;
   font-size: 14px;
   color: black
+}
+.login-page .form input::placeholder {
+  color: #333;
 }
 .login-page .form .btn {
   font-family: "Roboto", sans-serif;
@@ -78,4 +81,13 @@ body {
 
 .container#form-group {
   max-width: 150%;
+}
+
+.login-page .remember-me{
+  display: flex;
+}
+
+.login-page .remember-me input[type="checkbox"] {
+  width: 39px !important;
+  margin-top: 12px !important;
 }
