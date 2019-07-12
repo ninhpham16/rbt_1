@@ -59,6 +59,19 @@ en:
         name: "Theater Name"
         city: "City"
         action: "Action"
+      edit: 
+        button: "Update"
+      form:
+        button: "Create"
+      theater:
+        confirm: "Are You Sure ?"
+      destroy:
+        deleted: "Delete success"
+      create: 
+        success: "Create success"
+      update:
+        success: "Update theater successfully!"
+
     categories:
       category:
         confirm: "Are you sure ?"
