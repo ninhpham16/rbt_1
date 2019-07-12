@@ -35,8 +35,13 @@ theater = Theater.create(name: "CGV1", city_id: city.id)
 theater1 = Theater.create(name: "CGV_HCM", city_id: city1.id)
 
 10.times do
-    room = Room.create(name: "Spring", theater_id: theater.id)
-    room2 = Room.create(name: "Spring_HCM", theater_id: theater1.id)
+  room = Room.create(name: "Spring", theater_id: theater.id)
+  room2 = Room.create(name: "Spring_HCM", theater_id: theater1.id)
+end
+
+10.times do
+  name = Faker::Address.unique.city
+  City.create(name: name)
 end
 
 15.times do |n|

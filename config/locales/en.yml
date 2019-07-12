@@ -7,6 +7,7 @@ en:
       option: "Option"
       contact: "Contact"
       reservation: "Reservation"
+      city: "Cities"
     footer:
       get: "Get in Touch"
       live: "Chat live"
@@ -46,6 +47,10 @@ en:
       update: "Update"
     show:
       edit: "Edit"
+
+  cities:
+    index:
+      city: "Area"
 
   manager:
     theaters:

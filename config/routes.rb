@@ -25,6 +25,6 @@ Rails.application.routes.draw do
     resources :theaters
   end  
   resources :movies, only: [:show]
-
+  resources :cities, only: [:index]
   resources :users, only: [:show, :edit, :update]
 end
