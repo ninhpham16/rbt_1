@@ -89,6 +89,16 @@ en:
         image: "Image"
         select: "Select a category"
         create: "Create a new Movie"
+        aivailable: "Available"
+      index: 
+        name: "Name"
+        category: "Category"
+        created_at: "Create at"
+        trailer: "Trailer"
+        image: "Image"
+        update: "Update"
+        delete: "Delete"
+        new_movie: "New Movie"
     cities:
       create:
     shared:
