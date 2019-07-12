@@ -17,13 +17,14 @@ user = User.create!(name: "Winfrey",
 50.times do |n|
 name  = Faker::Name.name
 email = "ex-#{n+1}@gmail.com"
-password = "123456"
+password = 123456
 User.create!(name: name,
             email: email,
-            password: password,
             full_name: "Oprah Winfrey",
-            phone_number: "0964980884",
+            phone_number: "0964980884", 
             address: "America",
+            password: password,
+            password_confirmation: password
             )
 end
 city = City.create(name: "HaNoi")
@@ -32,10 +33,24 @@ city1 = City.create(name: "HCM")
 theater = Theater.create(name: "CGV1", city_id: city.id)
 theater1 = Theater.create(name: "CGV_HCM", city_id: city1.id)
 
-10.times do
-  room = Room.create(name: "Spring", theater_id: theater.id)
-  room2 = Room.create(name: "Spring_HCM", theater_id: theater1.id)
+
+room = Room.create(name: "Spring", theater_id: theater.id)
+room2 = Room.create(name: "Spring_HCM", theater_id: theater1.id)
+
+def create_30_seats room_id
+  for row in ("A".."E") do
+    for col in (1..6) do
+      seat = Seat.new
+      seat.name = "#{row}#{col}"
+      seat.room_id = room_id
+      seat.available = true
+      seat.save
+    end
+  end
 end
+
+create_30_seats room.id
+create_30_seats room2.id
 
 10.times do
   name = Faker::Address.unique.city
