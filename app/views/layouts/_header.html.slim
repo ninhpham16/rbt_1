@@ -10,7 +10,8 @@ header#gtco-footer data-stellar-background-ratio="0.5" role="contentinfo"
         .col-xs-8.text-right.menu-1
           ul
             li
-              a href="#"  = t ".menu"
+              = link_to cities_path
+                = t (".city")
             li.has-dropdown
               a href="#"  = t ".service"
               ul.dropdown
