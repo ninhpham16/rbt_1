@@ -91,3 +91,16 @@ body {
   width: 39px !important;
   margin-top: 12px !important;
 }
+
+.fa.fa-search {
+  position: absolute;
+  top: 16%;
+  z-index: 1;
+  color: #909ba5;
+  right: 88%;
+  font-size: 21px;
+}
+
+label#remember {
+  color: black;
+}
