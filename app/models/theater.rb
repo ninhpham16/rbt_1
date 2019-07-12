@@ -3,6 +3,6 @@ class Theater < ApplicationRecord
   has_many :rooms, dependent: :destroy
   has_many :movie_theaters, dependent: :destroy
 
-  validates :name, presence: true
   validates :city_id, presence: true
+  validates :name, presence: true, uniqueness: true
 end

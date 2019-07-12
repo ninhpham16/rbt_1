@@ -35,4 +35,8 @@ ul#accordionSidebar.navbar-nav.bg-gradient-primary.sidebar.sidebar-dark.accordio
     = link_to manager_theaters_path, class: " nav-link" do
       i.fas.fa-film
       span Theaters
+  li.nav-item
+    = link_to manager_movie_theaters_path, class: "nav-link collapsed" do
+      i.fas.fa-calendar
+      span Showtimes
   hr.sidebar-divider.d-none.d-md-block/

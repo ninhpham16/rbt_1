@@ -1,0 +1,9 @@
+tr
+  td = movie_theater.time
+  td = movie_theater.theater.name
+  td = movie_theater.movie.name
+  td = movie_theater.room.name
+  td
+    = link_to t(".edit"), edit_manager_movie_theater_path(movie_theater), remote: true, class: "btn btn-primary"
+    = link_to t(".delete"), manager_movie_theater_path(movie_theater),                    
+      method: :delete, data: { confirm: t(".confirm")}, class: "btn btn-danger" 

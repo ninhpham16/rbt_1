@@ -24,8 +24,6 @@ User.create!(name: name,
             full_name: "Oprah Winfrey",
             phone_number: "0964980884",
             address: "America",
-            password: "123456",
-            password_confirmation: "123456"
             )
 end
 city = City.create(name: "HaNoi")
