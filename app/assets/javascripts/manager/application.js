@@ -11,6 +11,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
 //= require rails-ujs
 //= require turbolinks
 //= require lib/jquery-3.2.1.min
@@ -23,3 +24,5 @@
 //= require lib/select2.min
 //= require lib/moment.min
 //= require toastr
+//= require lib/jquery.dataTables.min
+//= require manager/datatable

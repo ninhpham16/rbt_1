@@ -23,6 +23,8 @@
  *= require lib/sb-admin-2
  *= require toastr
  *= require manager/custom
+ *= require lib/jquery.dataTables.min
+ *= require lib/dataTables.bootstrap4.min
  */
 
  @import "font-awesome-sprockets";

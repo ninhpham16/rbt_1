@@ -48,6 +48,17 @@ en:
       edit: "Edit"
 
   manager:
+    theaters:
+      new: 
+        title: "New theater"
+        button: "Create"
+        select: "Select city"
+      index: 
+        all: "All Theaters"
+        new: "New Theater"
+        name: "Theater Name"
+        city: "City"
+        action: "Action"
     categories:
       new:
         title: "Create Category"

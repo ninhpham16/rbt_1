@@ -38,3 +38,15 @@ theater1 = Theater.create(name: "CGV_HCM", city_id: city1.id)
     room = Room.create(name: "Spring", theater_id: theater.id)
     room2 = Room.create(name: "Spring_HCM", theater_id: theater1.id)
 end
+
+15.times do |n|
+  name = Faker::Address.unique.state
+  City.create!(name:  name)
+end
+
+50.times do |n|
+  name = Faker::Name.name
+  city = City.all.sample
+  Theater.create!(name: name,
+                  city: city)
+end
