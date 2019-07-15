@@ -19,7 +19,7 @@ gem "bootstrap-sass", "~> 3.4.1"
 gem "sassc-rails", ">= 2.1.0"
 gem "jquery-rails"
 gem "font-awesome-sass", "~> 5.8.1"
-gem "kaminari" 
+gem "kaminari"
 gem "bootstrap4-kaminari-views"
 gem "devise"
 gem "paperclip"
@@ -27,7 +27,8 @@ gem "toastr-rails"
 group :development, :test do
   gem "faker"
   gem "pry-rails"
-  gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "byebug", platforms: %i[mri mingw x64_mingw]
+  gem "rubocop-rails"
 end
 
 group :development do
@@ -37,4 +38,4 @@ group :development do
   gem "spring-watcher-listen", "~> 2.0.0"
 end
 
-gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]

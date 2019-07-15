@@ -1,7 +1,7 @@
 module Manager
   class TheatersController < Manager::BaseController
     skip_before_action :verify_authenticity_token
-    before_action :theater, only: [:edit, :update, :destroy]
+    before_action :theater, only: %i[edit update destroy]
 
     def index
       @theaters = Theater.order(created_at: :desc)
@@ -27,7 +27,7 @@ module Manager
     def edit; end
 
     def update
-      if @theater.update_attributes(theater_params)
+      if @theater.update(theater_params)
         @theaters = Theater.order(created_at: :desc)
         respond_to do |format|
           format.html

@@ -1,7 +1,7 @@
 module Manager
   class RoomsController < Manager::BaseController
     skip_before_action :verify_authenticity_token
-    before_action :find_room, only: [:edit, :update, :destroy]
+    before_action :find_room, only: %i[edit update destroy]
 
     def index
       @rooms = Room.all.page(params[:page]).per Settings.per_page_rooms
@@ -18,20 +18,19 @@ module Manager
         redirect_to manager_rooms_path
       else
         flash[:danger] = t ".failed"
-        render 'new'
+        render "new"
       end
     end
 
-    def edit
-    end
+    def edit; end
 
     def update
-      if @room.update_attributes room_params
+      if @room.update room_params
         flash[:success] = t ".success"
         redirect_to manager_rooms_path
       else
         flash[:danger] = t ".failed"
-        render 'edit'
+        render "edit"
       end
     end
 
@@ -41,7 +40,7 @@ module Manager
       redirect_to manager_rooms_path
     end
 
-  private
+    private
 
     def room_params
       params.require(:room).permit(:name)

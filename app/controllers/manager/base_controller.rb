@@ -1,5 +1,5 @@
 module Manager
-  class BaseController < ApplicationController    
+  class BaseController < ApplicationController
     layout "admin"
 
     before_action :authenticate_admin!
