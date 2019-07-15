@@ -1,15 +1,15 @@
 module Manager
   class CitiesController < Manager::BaseController
     skip_before_action :verify_authenticity_token
-    before_action :find_city, except:[:index, :new, :create]
-    before_action :order, only:[:create, :update]
+    before_action :find_city, except: %i[index new create]
+    before_action :order, only: %i[create update]
 
     def index
-      @cities = City.all.page(params[:page]).per Settings.per_page_cities 
+      @cities = City.all.page(params[:page]).per Settings.per_page_cities
     end
 
     def new
-      @city = City.new 
+      @city = City.new
     end
 
     def create
@@ -24,11 +24,10 @@ module Manager
       end
     end
 
-    def edit
-    end
+    def edit; end
 
     def update
-      if @city.update_attributes city_params
+      if @city.update city_params
         respond_to do |format|
           format.html
           format.js
@@ -45,6 +44,7 @@ module Manager
     end
 
     private
+
     def city_params
       params.require(:city).permit(:name)
     end

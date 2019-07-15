@@ -1,8 +1,8 @@
 module Manager
   class CategoriesController < Manager::BaseController
     skip_before_action :verify_authenticity_token
-    before_action :find_category, except: [:index, :new, :create]
-    before_action :order, only: [:create, :update]
+    before_action :find_category, except: %i[index new create]
+    before_action :order, only: %i[create update]
 
     def index
       @categories = Category.all.page(params[:page]).per Settings.per_page_categories
@@ -24,11 +24,10 @@ module Manager
       end
     end
 
-    def edit
-    end
+    def edit; end
 
     def update
-      if @category.update_attributes category_params
+      if @category.update category_params
         respond_to do |format|
           format.html
           format.js
@@ -44,7 +43,8 @@ module Manager
       redirect_to manager_categories_path
     end
 
-    private 
+    private
+
     def category_params
       params.require(:category).permit(:name)
     end
