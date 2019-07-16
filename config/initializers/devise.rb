@@ -13,6 +13,6 @@ Devise.setup do |config|
   config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
   config.reset_password_within = 6.hours  
   config.scoped_views = true
-  config.sign_out_via = :get
+  config.sign_out_via = :delete
   config.sign_in_after_change_password = true
 end

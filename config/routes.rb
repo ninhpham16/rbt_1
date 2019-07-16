@@ -24,7 +24,8 @@ Rails.application.routes.draw do
     resources :rooms
     resources :theaters
   end  
-  resources :movies, only: [:show]
+
   resources :cities, only: [:index]
+  resources :movies, only: [:show, :index]
   resources :users, only: [:show, :edit, :update]
 end

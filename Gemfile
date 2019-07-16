@@ -24,6 +24,7 @@ gem "bootstrap4-kaminari-views"
 gem "devise"
 gem "paperclip"
 gem "toastr-rails"
+gem "ransack"
 group :development, :test do
   gem "faker"
   gem "pry-rails"
