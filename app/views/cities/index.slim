@@ -1,7 +1,0 @@
-.container
-  .card.d-none.d-sm-block
-    .list-group.list-group-flush.list
-    .list-group-item.list-group-item-action.disabled.bg-light
-      = t(".city")
-      = render partial: "city", collection: @cities, as: :city
-    = paginate @cities, theme: "twitter-bootstrap-4"

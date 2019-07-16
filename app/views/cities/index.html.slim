@@ -1,0 +1,9 @@
+.container
+  .card.d-none.d-sm-block
+    .list-group.list-group-flush.list
+    .list-group-item.list-group-item-action.bg-light
+      = t(".city")
+    = render partial: "city", collection: @cities, as: :city
+br
+.container
+  #theater
