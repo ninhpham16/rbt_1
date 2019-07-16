@@ -8,7 +8,7 @@ class StaticPagesController < ApplicationController
     date = params[:date]
     @movie_theaters = @theater.movie_theaters.date_like date
     respond_to do |format|
-      format.js {render layout: false}
-    end 
+      format.js { render layout: false }
+    end
   end
 end

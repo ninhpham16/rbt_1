@@ -2,8 +2,8 @@ module Manager
   class SessionsController < Devise::SessionsController
     layout "layoutlogin"
     skip_before_action :verify_authenticity_token
-    
-    def after_sign_in_path_for(resource)
+
+    def after_sign_in_path_for _resource
       manager_root_path
     end
 

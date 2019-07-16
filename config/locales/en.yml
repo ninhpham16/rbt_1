@@ -55,6 +55,12 @@ en:
     show:
       nil: "There are no theaters in this city yet"
       cinema: "Rubydev cinema"
+  reviews:
+    form:
+      login: "Login"
+      add: "Add"
+      rate: "You rate"
+      content: "Your review content"
   manager:
     theaters:
       new: 

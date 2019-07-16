@@ -16,3 +16,5 @@
 //= require_tree .
 //= require lib/main1
 //= require lib/jquery.min
+//= require rate.min
+//= require lib/jquery.raty

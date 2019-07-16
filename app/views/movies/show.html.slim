@@ -32,3 +32,14 @@ center
       = link_to t(".trailer"),"#", class: "btn btn-danger"
     .col-md-3
       = link_to t(".book"),"#", class: "btn btn-success"
+#tab-reviews.woocommerce-Tabs-panel--reviews.wc-tab
+  #reviews
+    #comments
+      h2.woocommerce-Reviews-title
+      .container
+        #review-list
+          - if @movie.reviews.count > 0
+              = render partial: "reviews/review", collection: @reviews, as: :review  
+      br       
+    #review-form
+      = render "reviews/form", review: @review
