@@ -52,7 +52,9 @@ en:
   cities:
     index:
       city: "Area"
-
+    show:
+      nil: "There are no theaters in this city yet"
+      cinema: "Rubydev cinema"
   manager:
     theaters:
       new: 

@@ -15,5 +15,7 @@ html
       - type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info')
       javascript:
         toastr["#{type}"]("#{f[1]}")
+    br
     = yield
+    br
     = render "layouts/footer"
