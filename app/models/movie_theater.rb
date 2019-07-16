@@ -3,4 +3,5 @@ class MovieTheater < ApplicationRecord
   belongs_to :movie
 
   scope :date_like, ->(date){where "time LIKE ?", "%#{date}%"}
+  belongs_to :room
 end

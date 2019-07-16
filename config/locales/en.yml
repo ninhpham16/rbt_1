@@ -99,6 +99,10 @@ en:
         confirm: "Are you sure ?"
       destroy:
         success: "Successfully"
+      update:
+        success: "Update category successfully!"
+      create:
+        success: "Create category successfully!"
 
     cities:
       create:
@@ -122,6 +126,33 @@ en:
         confirm: "Are you sure ?"
         delete: "Delete"
         edit: "Edit"
+      update:
+        success: "Update city successfully!"
+      create:
+        success: "Create city successfully!"
+
+    movie_theaters:
+      new:
+        title: "Create Showtime"
+        button: "Create"
+      index:
+        title: "List Showtimes"
+        time: "Time"
+        theat: "Theaters"
+        mo: "Movies"
+        ro: "Rooms"
+        ac: "Action"
+        add: "Add showtime"
+      movie_theater:
+        confirm: "Are you sure ?"
+      destroy:
+        success: "Successfully"
+      edit:
+        button: "Update"
+      update:
+        success: "Update showtime successfully!"
+      create:
+        success: "Create showtime successfully!"
 
 
     movies:
@@ -152,7 +183,6 @@ en:
         new_movie: "New Movie"
 
     shared:
-      _sidebar:
         create_movie: "Create Movie"
         success: "Successfully"
     rooms:

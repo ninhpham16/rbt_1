@@ -1,0 +1,3 @@
+$("#showtime-body").html("<%= j render partial: "movie_theater", collection: @movie_theaters %>");
+$("#showtimeModalNew").modal("hide");
+toastr["success"]('<%= t(".success") %>');
