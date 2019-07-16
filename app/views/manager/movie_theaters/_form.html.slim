@@ -1,7 +1,7 @@
 .modal-header
   h2= t(".title")
   button#close aria-label="Close" data-dismiss="modal" type="button"
-    span aria-hidden="true"  
+    span aria-hidden="true"
       i.fas.fa-times
 .modal-body.movie-theater
   = form_for [:manager, @movie_theater], remote: true do |f|
@@ -12,15 +12,15 @@
     .form-group.box-select
       = f.label :theater
       br
-      = f.select :theater_id, @supports.theaters
+      = f.select :theater_id, @support_movie_theater.theaters
     .form-group.box-select
       = f.label :movie
       br
-      = f.select :movie_id, @supports.movies
+      = f.select :movie_id, @support_movie_theater.movies
     .form-group.box-select
       = f.label :room
       br
-      = f.select :room_id, @supports.rooms
+      = f.select :room_id, @support_movie_theater.rooms
     .form-group
       = f.submit yield(:button_text), remote: true, class: "btn btn-info"
       br

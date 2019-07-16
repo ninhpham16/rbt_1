@@ -9,15 +9,13 @@ module Manager
     end
 
     def new
-      @movie_theater = MovieTheater.new 
-      @supports = ::Supports::Theater.new @theater
-      @supports = ::Supports::Movie.new @movie
-      @supports = ::Supports::Room.new @room
+      @movie_theater = MovieTheater.new
+      @support_movie_theater = Support::MovieTheater.new
     end
 
     def create
-      @movie_theaters = MovieTheater.new city_params
-      if @movie_theater.save
+      @movie_theaters = MovieTheater.new movie_theater_params
+      if @movie_theaters.save
         respond_to do |format|
           format.html
           format.js
@@ -34,9 +32,7 @@ module Manager
     end
 
     def edit
-      @supports = ::Supports::Theater.new @theater
-      @supports = ::Supports::Movie.new @movie
-      @supports = ::Supports::Room.new @room
+      @support_movie_theater = Support::MovieTheater.new
     end
 
     def update

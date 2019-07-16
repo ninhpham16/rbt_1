@@ -13,6 +13,7 @@ module Manager
     end
 
     def create
+      @movie = Movie.new movie_params
       if @movie.save
         flash[:success] = t ".success"
         redirect_to manager_movies_path
