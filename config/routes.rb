@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   end
 
   root "static_pages#home"
+  get "/schedule", to: "static_pages#schedule"
 
   namespace :manager do
     root "static_pages#index"
@@ -28,4 +29,5 @@ Rails.application.routes.draw do
   resources :cities, only: [:index]
   resources :movies, only: [:show, :index]
   resources :users, only: [:show, :edit, :update]
+  resources :theaters, only: [:show]
 end

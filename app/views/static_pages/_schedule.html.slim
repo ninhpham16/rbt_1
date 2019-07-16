@@ -1,0 +1,13 @@
+.gtco-section
+  .gtco-container
+    .row
+      - @movie_theaters.each do |movie_theater|
+        .col-md-3
+          a.fh5co-card-item
+            figure
+              .overlay
+                i.ti-plus
+              img.img-responsive alt="Image" src="" /
+          .fh5co-text
+            h2 = movie_theater.movie.name
+            h3 = movie_theater.time.strftime('%H:%M')
