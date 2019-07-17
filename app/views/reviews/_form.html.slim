@@ -1,0 +1,23 @@
+.container
+  #reviews.woocommerce-Reviews
+    #review_form_wrapper
+      #review_form
+        #respond.comment-respond
+          = form_for review,remote: true, id:"commentform", class: "comment-form" do |f|
+            = f.hidden_field :movie_id, value: @movie.id
+            .field
+              = f.label :rate, t(".rate")
+              #star-rating
+            br
+            p.comment-form-comment
+              = f.label :content, t(".content"), class: "required"
+              br
+              = f.text_area :content, id: "comment", style: "width: 100% !important"
+            - if user_signed_in?
+                = f.submit t(".add"), class: "submit form-submit"
+            - else
+              .submit
+                = link_to t(".login"), new_user_session_path, class:"btn btn-danger"  
+            = render "shared/error_messages", object: f.object
+    .clear
+    br

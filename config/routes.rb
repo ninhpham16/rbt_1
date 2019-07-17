@@ -31,4 +31,5 @@ Rails.application.routes.draw do
   resources :cities, only: [:index, :show]
   resources :users, only: [:show, :edit, :update]
   resources :theaters, only: [:show]
+  resources :reviews
 end
