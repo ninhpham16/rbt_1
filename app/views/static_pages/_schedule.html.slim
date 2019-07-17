@@ -8,6 +8,7 @@
               .overlay
                 i.ti-plus
               img.img-responsive alt="Image" src="" /
+              = image_tag movie_theater.movie.image.url, alt: "Image", class: "img-responsive"
           .fh5co-text
-            h2 = movie_theater.movie.name
+            h2 = link_to movie_theater.movie.name, movie_theater
             h3 = movie_theater.time.strftime('%H:%M')

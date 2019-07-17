@@ -16,9 +16,9 @@
     .field
       = f.label :actor, t(".actor")
       = f.text_field :actor, class: "form-control"
-    .field
-      = f.label :release, t(".release")
-      = f.datetime_select :release, class: "form-control"
+    .form-group
+      = f.label :release
+      = f.text_field :release, class: "form-control", id: "datetimepicker" 
     .field
       = f.label :rated, t(".rated")
       = f.text_field :rated, class: "form-control"

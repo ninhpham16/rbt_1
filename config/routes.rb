@@ -33,4 +33,5 @@ Rails.application.routes.draw do
   resources :theaters, only: [:show]
   resources :reviews
   resources :orders, only: [:show]
+  resources :movie_theaters, only: [:show]
 end

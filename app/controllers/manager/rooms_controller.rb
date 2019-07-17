@@ -60,8 +60,8 @@ module Manager
     end
 
     def create_30_seats room_id
-      ("A".."E").each do
-        (1..6).each do
+      ("A".."E").each do |row|
+        (1..6).each do |col|
           seat = Seat.new
           seat.name = "#{row}#{col}"
           seat.room_id = room_id
