@@ -33,7 +33,7 @@ Rails.application.routes.draw do
   resources :cities, only: [:index, :show]
   resources :users, only: [:show, :edit, :update]
   resources :theaters, only: [:show]
-  resources :orders, only: [:show, :index]
+  resources :reviews
+  resources :orders, only: [:new, :create, :show, :index]
   resources :movie_theaters, only: [:show]
-  resources :reviews, only: [:create, :destroy]
 end

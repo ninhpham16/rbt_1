@@ -9,5 +9,9 @@ module Supports
     def names
       @names ||= Theater.pluck(:name, :id)
     end
+
+    def cities
+      @cities ||= City.all
+    end
   end
 end

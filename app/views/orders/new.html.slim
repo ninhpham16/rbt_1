@@ -1,0 +1,47 @@
+.order-item-page
+  h1
+    | Booking online
+  h2
+    = @room.theater.city.name
+    | |
+    = @room.theater.name
+    | |
+    = @room.name
+  .show-room
+    .screen
+      | Screen
+    = form_for @order do |f|
+      = render "shared/error_messages", object: f.object
+      table
+        tr
+          th
+          - (1..6).each do |col|
+            th
+              = "#{col}"
+        - id = 0
+        - ("A".."E").each do |row|
+          tr
+            td#first_col
+              = "#{row}"
+            - (1..6).each do
+              td.seat
+                = f.fields_for :order_items do |ff|
+                  = ff.hidden_field :movie_theater_id, value: @movie_theater.id
+                  = ff.label :seat_id, "#{@seats[id][1]}"
+                  = ff.check_box :seat_id, {}, @seats[id][0], nil
+              - id +=1
+      .seat-status
+        .seat-checked
+        span
+          | Checked
+        .seat-free
+
+        span
+          | Free
+        .seat-picked
+        span
+          | Picked
+      = f.hidden_field :total 
+      = f.hidden_field :user_id, value: current_user.id
+      = f.submit t(".booking"), class: "btn btn-primary"
+    

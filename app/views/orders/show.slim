@@ -11,7 +11,7 @@
           = @order.user.email
       table 
         tr
-          td = t(".theater") 
+          td = t(".theater")
           td = @order_items.first.movie_theater.theater.name
         tr
           td = t(".movie")  
@@ -27,5 +27,5 @@
           end
         tr
           td = t(".total")  
-          td = @order.total
+          td = number_to_currency(@order.total)
       = link_to t(".payment"), "#", class: "btn btn-success"

@@ -11,8 +11,9 @@ module Manager
     def show; end
 
     def new
+      @theater = Theater.new
+      @supports = Supports::Theater.new
       @room = Room.new
-      @supports = Supports::Theater.new @theater
     end
 
     def create
