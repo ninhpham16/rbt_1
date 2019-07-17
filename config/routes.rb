@@ -32,4 +32,5 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :edit, :update]
   resources :theaters, only: [:show]
   resources :reviews
+  resources :orders, only: [:show]
 end

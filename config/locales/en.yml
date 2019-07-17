@@ -13,6 +13,17 @@ en:
       get: "Get in Touch"
       live: "Chat live"
       social: "Get social"
+  
+  orders:
+    show:
+      name: "Name : "
+      email: "Email : "
+      theater: "Theater : "
+      showtime: "Showtime : "
+      seat: "Seat : "
+      payment: "Payment"
+      movie: "Movie : "
+      total: "Total : "
 
   static_pages:
     home:

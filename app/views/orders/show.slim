@@ -1,0 +1,31 @@
+.show-order
+  h1 Order
+  .ticket
+    .ticket__content
+      .text-center
+        p 
+          = t(".name") 
+          = @order.user.name
+        p 
+          = t(".email") 
+          = @order.user.email
+      table 
+        tr
+          td = t(".theater") 
+          td = @order_items.first.movie_theater.theater.name
+        tr
+          td = t(".movie")  
+          td = @order_items.first.movie_theater.movie.name
+        tr
+          td = t(".showtime")  
+          td = @order_items.first.movie_theater.time.strftime(Settings.format_time)
+        tr
+          td = t(".seat")  
+          td 
+            - @order.order_items.each do |ot|
+              = ot.seat.name 
+          end
+        tr
+          td = t(".total")  
+          td = @order.total
+      = link_to t(".payment"), "#", class: "btn btn-success"
