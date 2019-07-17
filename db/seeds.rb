@@ -1,4 +1,3 @@
-
 admin = Admin.create!(name: "BinhPham",
                       email: "binh@gmail.com",
                       password: "123456",
@@ -36,6 +35,8 @@ theater1 = Theater.create(name: "CGV_HCM", city_id: city1.id)
 
 room = Room.create(name: "Spring", theater_id: theater.id)
 room2 = Room.create(name: "Spring_HCM", theater_id: theater1.id)
+
+movie_theater = MovieTheater.create(theater_id: theater.id, movie_id: Movie.first.id, room_id: romm.id)
 
 def create_30_seats room_id
   for row in ("A".."E") do

@@ -232,3 +232,11 @@ en:
       show:
         greeting: "Show room %{room} of %{theater} theater"
         index: "Back to index"
+  movie_theaters:
+    show:
+      name: "Name: "
+      category: "Category: "
+      rate: "Rated: "
+      room: "Room: "
+      trailer: "Trailer"
+      ticket: "Book tickets"
