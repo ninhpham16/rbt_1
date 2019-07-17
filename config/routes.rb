@@ -25,13 +25,14 @@ Rails.application.routes.draw do
     resources :rooms
     resources :theaters
     resources :movie_theaters
+    resources :reviews, only: [:index, :destroy]
   end  
 
   resources :movies, only: [:show, :index]
   resources :cities, only: [:index, :show]
   resources :users, only: [:show, :edit, :update]
   resources :theaters, only: [:show]
-  resources :reviews
   resources :orders, only: [:show]
   resources :movie_theaters, only: [:show]
+  resources :reviews, only: [:create, :destroy]
 end

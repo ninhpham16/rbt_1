@@ -1,0 +1,2 @@
+  $("#review-list").html("<%= j render partial: "reviews/review", collection: @reviews, as: :review %>");
+  toastr["info"]('<%= t(".deleted") %>');
