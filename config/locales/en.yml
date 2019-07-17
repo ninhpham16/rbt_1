@@ -209,9 +209,15 @@ en:
         action: "Action"
         edit: "Edit"
         delete: "Delete"
+        show: "Show"
+        create: "Create room"
+        confirm: "Are you sure"
       edit:
         update: "Update"
         edt-room: "Edit room"
       new:
         title: "Create Room"
         button: "Create"
+      show:
+        greeting: "Show room %{room} of %{theater} theater"
+        index: "Back to index"
