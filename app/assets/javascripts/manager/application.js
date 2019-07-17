@@ -26,4 +26,5 @@
 //= require lib/moment.min
 //= require toastr
 //= require lib/jquery.dataTables.min
+//= require lib/jquery.datetimepicker.full.min
 //= require manager/datatable

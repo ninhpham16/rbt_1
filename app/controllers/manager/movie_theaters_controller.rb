@@ -14,8 +14,8 @@ module Manager
     end
 
     def create
-      @movie_theaters = MovieTheater.new movie_theater_params
-      if @movie_theaters.save
+      @movie_theater = MovieTheater.new movie_theater_params
+      if @movie_theater.save
         respond_to do |format|
           format.html
           format.js

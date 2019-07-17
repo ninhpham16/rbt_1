@@ -4,3 +4,4 @@ per_page_cities: 10
 per_page_rooms: 5
 per_page_movies: 10
 per_page_movie_theaters: 6
+format_time: "%d/%m %H:%M"
