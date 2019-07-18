@@ -20,13 +20,17 @@ header#gtco-footer data-stellar-background-ratio="0.5" role="contentinfo"
             li
               = link_to cities_path
                 = t (".city")
-            li.has-dropdown
-              a href="#"  = t ".service"
-              ul.dropdown
-                li
-                  a href="#" = t ".option"
-            li
-              a href="#" = t ".contact"
-            li.btn-cta
-              a href="#" 
-                span = t ".reservation"
+            - if current_user
+              li
+                = link_to user_path(current_user)
+                  = t (".profile") 
+              li
+                = link_to orders_path
+                  = t ".history"
+              li
+                = link_to destroy_user_session_path, method: :delete
+                  = t(".logout")
+            - else
+              li.btn-cta
+                = link_to user_session_path 
+                  span = t ".signin"
