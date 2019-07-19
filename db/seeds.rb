@@ -26,17 +26,30 @@ User.create!(name: name,
             password_confirmation: password
             )
 end
-city = City.create(name: "HaNoi")
-city1 = City.create(name: "HCM")
+city = City.create!(name: "HaNoi")
+city1 = City.create!(name: "HCM")
 
-theater = Theater.create(name: "CGV1", city_id: city.id)
-theater1 = Theater.create(name: "CGV_HCM", city_id: city1.id)
+theater = Theater.create!(name: "CGV1", city_id: city.id)
+theater1 = Theater.create!(name: "CGV_HCM", city_id: city1.id)
 
 
-room = Room.create(name: "Spring", theater_id: theater.id)
-room2 = Room.create(name: "Spring_HCM", theater_id: theater1.id)
+room = Room.create!(name: "Spring", theater_id: Theater.first.id)
+room2 = Room.create!(name: "Spring_HCM", theater_id: Theater.second.id)
 
-movie_theater = MovieTheater.create(theater_id: theater.id, movie_id: Movie.first.id, room_id: romm.id)
+10.times do |n|
+  name = Faker::Name.name
+  Category.create!(name: name)
+end
+
+10.times do |n|
+  name = Faker::Movie.quote
+  category = Category.first
+  Movie.create!(name: name,
+                available: true,
+                category: category)
+end
+time = Faker::Time.between(DateTime.now - 1, DateTime.now)
+movie_theater = MovieTheater.create!(theater_id: Theater.all.sample.id, movie_id: Movie.first.id, room_id: Room.all.sample.id, time: time)
 
 def create_30_seats room_id
   for row in ("A".."E") do
@@ -68,4 +81,30 @@ end
   city = City.all.sample
   Theater.create!(name: name,
                   city: city)
+end
+
+
+10.times do |n|
+  theater = Theater.first
+  movie = Movie.all.sample
+  time = Faker::Time.between(DateTime.now - 1, DateTime.now)
+  room = Room.all.sample
+  MovieTheater.create!(theater: theater,
+                movie: movie,
+                time: time,
+                room: room)
+end
+
+50.times do |n|
+  user = User.all.sample
+  total = Faker::Number.number(5)
+  Order.create!( user: user,
+                 total: total,
+                  )
+end
+
+movie = MovieTheater.all.sample
+orders = Order.take(50)
+5.times do |n|
+  orders.each { |order| order.order_items.create!(movie_theater: movie, seat: Seat.first) } 
 end
