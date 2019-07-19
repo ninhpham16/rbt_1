@@ -1,14 +1,28 @@
-.gtco-section
-  .gtco-container
+.container
+  br
+  .card.card-sm.mb-3.card-sponsored.sponsored-movie-tracking 
+    span.sprite.featured
+    - @movies.each do |movie|
+      .row
+        .col-3.col-sm-2
+          = link_to movie
+            .rounded.img-fluid
+              - if !movie.image_file_name.nil?
+                .rounded.img-fluid
+                  = image_tag movie.image.url  
+              - else 
+                = image_tag "https://i.moveek.com/media/resized/mini/5ce54954bcd15926201453.jpg"
+        .col.ml-n2
+          a href="/phim/spider-man-2-far-from-home/" 
+            | #{movie.name}
+          p.card-text.small.text-muted.mb-0
+            | #{movie.rated} ·
+            | #{movie.duration}  ·
+            a data-target="#videoModal" data-toggle="modal" Trailer
+          .mt-2
+            .mb-1
+            - @movie_theaters.each do |movie_theater|
+              a.btn.btn-sm.btn-showtime.btn-outline-dark.is-ticketing 
+                span.time #{movie_theater.time.strftime("%H:%M")}
+      br
     .row
-      - @movie_theaters.each do |movie_theater|
-        .col-md-3
-          a.fh5co-card-item
-            figure
-              .overlay
-                i.ti-plus
-              img.img-responsive alt="Image" src="" /
-              = image_tag movie_theater.movie.image.url, alt: "Image", class: "img-responsive"
-          .fh5co-text
-            h2 = link_to movie_theater.movie.name, movie_theater
-            h3 = movie_theater.time.strftime('%H:%M')

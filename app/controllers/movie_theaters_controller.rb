@@ -1,5 +1,5 @@
 class MovieTheatersController < ApplicationController
-  def show 
+  def show
     @movie_theater = MovieTheater.find params[:id]
   end
 end

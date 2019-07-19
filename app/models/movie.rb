@@ -1,6 +1,7 @@
 class Movie < ApplicationRecord
   belongs_to :category
   has_many :reviews, dependent: :destroy
+  has_many :movie_theaters, dependent: :destroy
 
   validates :name, presence: true
   validates :category_id, presence: true

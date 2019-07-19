@@ -8,8 +8,7 @@ module Manager
       @rooms = Room.all.order(updated_at: :desc).page(params[:page]).per Settings.per_page_rooms
     end
 
-    def show
-    end
+    def show; end
 
     def new
       @room = Room.new
@@ -74,6 +73,5 @@ module Manager
     def find_seats
       @seats = @room.seats.pluck(:id, :name, :available)
     end
-
   end
 end

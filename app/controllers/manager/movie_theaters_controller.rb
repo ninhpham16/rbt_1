@@ -1,8 +1,8 @@
 module Manager
   class MovieTheatersController < Manager::BaseController
     skip_before_action :verify_authenticity_token
-    before_action :find_movie_theater, except:[:index, :new, :create]
-    before_action :order, only:[:create, :update]
+    before_action :find_movie_theater, except: %i[index new create]
+    before_action :order, only: %i[create update]
 
     def index
       @movie_theaters = MovieTheater.all.page(params[:page]).per Settings.per_page_movie_theaters
@@ -36,7 +36,7 @@ module Manager
     end
 
     def update
-      if @movie_theater.update_attributes movie_theater_params
+      if @movie_theater.update movie_theater_params
         respond_to do |format|
           format.html
           format.js
@@ -47,6 +47,7 @@ module Manager
     end
 
     private
+
     def movie_theater_params
       params.require(:movie_theater).permit(:theater_id, :movie_id, :room_id, :time)
     end
