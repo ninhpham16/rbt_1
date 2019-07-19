@@ -3,12 +3,13 @@ en:
     header:
       web_name: "RubyDevCinema"
       menu: "Menu"
-      service: "Service"
+      profile: "Profile"
       option: "Option"
-      contact: "Contact"
-      reservation: "Reservation"
+      history: "Transaction history"
+      signin: "Log in"
       city: "Cities"
       search: "Search..."
+      logout: "Log out"
     footer:
       get: "Get in Touch"
       live: "Chat live"
@@ -24,6 +25,9 @@ en:
       payment: "Payment"
       movie: "Movie : "
       total: "Total : "
+    index:
+      title: "Transactions history"
+      view: "View"
 
   static_pages:
     home:

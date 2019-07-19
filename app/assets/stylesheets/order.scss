@@ -49,3 +49,26 @@
     }
   }
 }
+.index-orders{
+  background-color: #f8f8f8 !important;
+  box-shadow: none !important;
+  .row{
+    margin-top: 20px;
+  }
+  h2{
+    color: #fff;
+    background-color: #333;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+  }
+  h4{
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0 !important;
+  }
+  p{
+    font-size: 18px;
+    color: #000;
+    font-family: sans-serif;
+  }
+}
