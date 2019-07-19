@@ -1,0 +1,28 @@
+.container-fluid
+  .card.shadow.mb-4
+    .card-header.py-3
+      h6.m-0.font-weight-bold.text-primary
+        = t(".all")
+    .card-body
+      .table
+        #dataTable_wrapper.dataTables_wrapper.dt-bootstrap4
+          .row
+            .col-sm-12
+              table#theater.table.table-bordered.dataTable.table-striped.table-hover
+                thead#theater-t
+                  tr role="row"
+                    th.sorting style="width: 10%;" 
+                      = t(".id")
+                    th.sorting style="width: 150px;" 
+                      = t(".city")
+                    th.sorting style="width: 150px;" 
+                      = t(".date")
+                    th.sorting style="width: 20%;" 
+                      = t(".theater")
+                    th style="width: 20%;"
+                      = t(".action")                                        
+                tbody#theater-table
+                  = render @orders          
+            .col-sm-12.col-md-7
+              #dataTable_paginate.dataTables_paginate.paging_simple_numbers
+#myIndex

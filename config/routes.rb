@@ -26,6 +26,7 @@ Rails.application.routes.draw do
     resources :theaters
     resources :movie_theaters
     resources :reviews, only: [:index, :destroy]
+    resources :orders
   end  
 
   resources :movies, only: [:show, :index]
