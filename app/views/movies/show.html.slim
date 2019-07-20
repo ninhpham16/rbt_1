@@ -31,7 +31,15 @@ center
     .col-md-2.mr-5
       = link_to t(".trailer"),"#", class: "btn btn-danger"
     .col-md-3
-      = link_to t(".book"),"#", class: "btn btn-success"
+      = link_to t("book"), {controller: "static_pages", action: "date", movie: @movie.id }, remote: true, class: "btn btn-success"
+.container
+  #date_movie
+.container
+  #city_movie
+.container
+  #show_theater
+.container
+  #show_showtime
 #tab-reviews.woocommerce-Tabs-panel--reviews.wc-tab
   #reviews
     #comments

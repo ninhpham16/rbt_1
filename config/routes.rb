@@ -15,6 +15,10 @@ Rails.application.routes.draw do
 
   root "static_pages#home"
   get "/schedule", to: "static_pages#schedule"
+  get "/date", to: "static_pages#date"
+  get "/show_city", to: "static_pages#show_city"
+  get "/show_theater", to: "static_pages#show_theater"
+  get "/show_showtime", to: "static_pages#show_showtime"
 
   namespace :manager do
     root "static_pages#index"
