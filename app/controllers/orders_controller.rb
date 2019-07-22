@@ -1,5 +1,4 @@
 class OrdersController < ApplicationController
-
   before_action :find_movie_theater, only: %i[new]
   before_action :authenticate_user!
 

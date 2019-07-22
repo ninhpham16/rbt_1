@@ -28,4 +28,5 @@ table.table.table-condensed
           td = link_to t(".delete"),manager_movie_path(movie),method: :delete,
             data: { confirm: t(".confirm")}, class: "btn btn-danger"          
     table
+    = paginate @movies
 #myModalIndex

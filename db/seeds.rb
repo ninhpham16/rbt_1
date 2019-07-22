@@ -48,9 +48,9 @@ end
                 available: true,
                 category: category)
 end
+
 time = Faker::Time.between(DateTime.now - 1, DateTime.now)
 movie_theater = MovieTheater.create!(theater_id: Theater.all.sample.id, movie_id: Movie.first.id, room_id: Room.all.sample.id, time: time)
-end
 
 def create_30_seats room_id
  for row in ("A".."E") do

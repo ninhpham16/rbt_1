@@ -1,7 +1,6 @@
 Devise.setup do |config|
-  
-  config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
-  
+
+  config.mailer_sender = 'email@example.com'
   require "devise/orm/active_record" 
   config.case_insensitive_keys = [:email]
   config.strip_whitespace_keys = [:email] 
@@ -15,4 +14,5 @@ Devise.setup do |config|
   config.scoped_views = true
   config.sign_out_via = :delete
   config.sign_in_after_change_password = true
+
 end

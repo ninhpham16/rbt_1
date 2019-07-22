@@ -5,7 +5,7 @@ module Manager
     before_action :order, only: %i[create update]
 
     def index
-      @cities = City.all.page(params[:page]).per Settings.per_page_cities
+      @cities = City.all.order(created_at: :desc).page(params[:page]).per Settings.per_page_cities
     end
 
     def new

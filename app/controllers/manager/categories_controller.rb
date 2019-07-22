@@ -5,7 +5,7 @@ module Manager
     before_action :order, only: %i[create update]
 
     def index
-      @categories = Category.all.page(params[:page]).per Settings.per_page_categories
+      @categories = Category.all.order(created_at: :desc).page(params[:page]).per Settings.per_page_categories
     end
 
     def new

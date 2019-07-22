@@ -4,7 +4,7 @@ module Manager
     before_action :find_movie, except: %i[index new create]
     before_action :all_categories, only: %i[new edit]
     def index
-      @movies = Movie.all.page(params[:page]).per Settings.per_page_movies
+      @movies = Movie.all.order(created_at: :desc).page(params[:page]).per Settings.per_page_movies
     end
 
     def new
