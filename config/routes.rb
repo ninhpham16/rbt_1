@@ -19,6 +19,10 @@ Rails.application.routes.draw do
   get "/show_city", to: "static_pages#show_city"
   get "/show_theater", to: "static_pages#show_theater"
   get "/show_showtime", to: "static_pages#show_showtime"
+  get "/card/new" => "billings#new_card", as: :add_payment_method
+  post "/card" => "billings#create_card", as: :create_payment_method
+  get "/success" => "billings#success", as: :success
+  post "/payment" => "billings#payment", as: :payment
 
   namespace :manager do
     root "static_pages#index"
@@ -40,4 +44,6 @@ Rails.application.routes.draw do
   resources :reviews
   resources :orders, only: [:new, :create, :show, :index]
   resources :movie_theaters, only: [:show]
+  resources :reviews, only: [:create, :destroy]
+  resources :billings, only: [:index]
 end

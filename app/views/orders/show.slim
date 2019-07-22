@@ -28,4 +28,4 @@
         tr
           td = t(".total")  
           td = number_to_currency(@order.total)
-      = link_to t(".payment"), "#", class: "btn btn-success"
+      = link_to t(".payment"), billings_path, class: "btn btn-success"

@@ -279,3 +279,13 @@ en:
       room: "Room: "
       trailer: "Trailer"
       ticket: "Book tickets"
+  billings:
+    index:
+      wel: "Welcome"
+      pay: "Do you want to pay ?"
+      let: "Let's go"
+    success:
+      pay: "Payment"
+      success: "You successfully linked a credit card to your account"
+    payment:
+      success: "Success"

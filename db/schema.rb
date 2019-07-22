@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_22_034402) do
+ActiveRecord::Schema.define(version: 2019_07_22_062528) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -86,6 +86,15 @@ ActiveRecord::Schema.define(version: 2019_07_22_034402) do
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
+  create_table "payments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "full_name"
+    t.string "telephone"
+    t.string "email"
+    t.string "card_token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content"
     t.integer "rate"
@@ -132,6 +141,7 @@ ActiveRecord::Schema.define(version: 2019_07_22_034402) do
     t.string "full_name"
     t.string "phone_number"
     t.string "address"
+    t.string "stripe_id"
     t.boolean "deactivated", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
