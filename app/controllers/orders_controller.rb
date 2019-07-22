@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   before_action :find_movie_theater, only: %i[new]
-  
+
   def new
     identify_room
     @order = Order.new
@@ -13,8 +13,8 @@ class OrdersController < ApplicationController
       flash[:success] = "Success"
       redirect_to @order
     else
-      redirect_to new_order_path(movie_theater_id: 
-        params[:order][:order_items_attributes]['0'][:movie_theater_id])
+      redirect_to new_order_path(movie_theater_id:
+        params[:order][:order_items_attributes]["0"][:movie_theater_id])
     end
   end
 
@@ -25,12 +25,13 @@ class OrdersController < ApplicationController
 
   def index
     @orders = Order.all.order(created_at: :desc).page(params[:page]).per Settings.per_page_orders
-  end 
+  end
 
-private
+  private
+
   def order_params
     params.require(:order).permit(:user_id,
-     order_items_attributes: [:id, :movie_theater_id, :order_id, :seat_id])
+                                  order_items_attributes: %i[id movie_theater_id order_id seat_id])
   end
 
   def find_movie_theater

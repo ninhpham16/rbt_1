@@ -12,4 +12,30 @@ class StaticPagesController < ApplicationController
       format.js { render layout: false }
     end
   end
+
+  def date
+    @movie = Movie.find params[:movie]
+    @dates = @movie.movie_theaters.pluck(:time).map(&:to_date).uniq
+  end
+
+  def show_city
+    movie_theaters = Movie.find(params[:movie]).movie_theaters.date_like(params[:date])
+    theater_ids = movie_theaters.pluck(:theater_id).uniq
+    city_ids = Theater.where(theater_id: theater_ids).pluck(:city_id)
+    @cities = City.where(id: city_ids)
+  end
+
+  def show_theater
+    theater_ids = MovieTheater.movie_like(params[:movie].to_i).pluck(:theater_id).uniq
+    theaters = Theater.where(id: theater_ids)
+    @theaters = []
+    theaters.each do |theater|
+      @theaters << theater if theater.city_id == params[:city].to_i
+    end
+  end
+
+  def show_showtime
+    @movie_theaters = Theater.find(params[:theater]).movie_theaters
+                             .where(movie_id: params[:movie].to_i).date_like(params[:date])
+  end
 end

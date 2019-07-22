@@ -1,0 +1,5 @@
+- @movie_theaters.each do |showtime|
+  .col-md-2
+      .card
+        = link_to showtime.time.strftime("%H:%M"),
+                "", remote: true, class: "btn btn-light text-muted date"
