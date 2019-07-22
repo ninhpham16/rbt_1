@@ -28,6 +28,8 @@ en:
     index:
       title: "Transactions history"
       view: "View"
+    new:
+      booking: "Booking"
 
   static_pages:
     home:

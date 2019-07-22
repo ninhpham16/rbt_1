@@ -13,7 +13,6 @@
 //= require lib/jquery.min
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require_tree .
 //= require lib/main1
 //= require rate.min

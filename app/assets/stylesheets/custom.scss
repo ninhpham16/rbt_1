@@ -108,6 +108,56 @@ label#remember {
 .color-555 {
   color: #555;
 }
+/// OrderItems new User
+.show-room {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.show-room table{
+  border-collapse: separate;
+  border-spacing: 10px;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+.order-item-page .show-room table tr {
+  .seat, td {
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: red;
+    text-align: center;
+    color: black;
+      label{
+        width: 100%;
+        height: 100%;
+        font-size: 1em;
+        margin-bottom: 0px;
+        color: #727680;
+      }
+      input{
+        display: none;
+      }
+  }
+}
+.show-room .seat:hover {
+  background-color: aqua;
+  color: gray;
+}
+
+.show-room #first_col, 
+.show-room th {
+  border-style: none;
+  color: black;
+  font-size: 1em;
+  height: 100%;
+}
+.container label {
+  color: black
+}
 
 #comment {
   background-color: rgb(232, 232, 239);
@@ -131,4 +181,53 @@ a.btn.btn-light.text-muted.date {
   margin-left: 4px;
   margin-top: 4px;
   color: #030303;
+}
+
+.order-item-page h2 {
+  font-family: sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.order-item-page .screen {
+  font-family: cursive;
+  color: gray;
+  line-height: 1;
+  text-align: center;
+  background-color: bisque;
+  border: solid 0.5px gray;
+  width: 450px;
+  height: 30px;
+  margin-left: 200px;
+  border-radius: 50%;
+  font-size: x-large;
+}
+
+.seat-status {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  .seat-checked{
+    border-radius: 3px;
+    background-color: brown;
+    width: 30px;
+    height: 30px;
+  }
+  .seat-free {
+    border-radius: 3px;
+    background-color: blanchedalmond;
+    width: 30px;
+    height: 30px;
+  }
+  .seat-picked {
+    border-radius: 3px;
+    background-color: #bcbcbc;
+    width: 30px;
+    height: 30px;
+  }
+  span {
+    margin: 0px 20px 0px 5px;
+    font-family: sans-serif;
+  }
 }

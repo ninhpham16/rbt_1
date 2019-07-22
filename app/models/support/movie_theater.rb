@@ -13,5 +13,9 @@ module Support
     def rooms
       @rooms ||= Room.pluck(:name, :id)
     end
+
+    def cities
+      @cities ||= City.all
+    end
   end
 end
