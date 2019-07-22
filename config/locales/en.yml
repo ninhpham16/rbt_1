@@ -253,20 +253,24 @@ en:
         theater: "Theater"
         city: "City"
         action: "Action"
-        edit: "Edit"
         delete: "Delete"
-        show: "Show"
         create: "Create room"
-        confirm: "Are you sure"
       edit:
         update: "Update"
         edt-room: "Edit room"
+        button: "Submit"
       new:
         title: "Create Room"
         button: "Create"
+      form:
+        title: "Create Room"
       show:
         greeting: "Show room %{room} of %{theater} theater"
         index: "Back to index"
+      room:
+        confirm: "Are you sure"
+        show: "Show"
+        edit: "Edit"
   movie_theaters:
     show:
       name: "Name: "
