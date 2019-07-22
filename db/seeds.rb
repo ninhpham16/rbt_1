@@ -71,12 +71,12 @@ create_30_seats room2.id
   City.create(name: name)
 end
 
-15.times do |n|
+2.times do |n|
   name = Faker::Address.unique.state
   City.create!(name:  name)
 end
 
-50.times do |n|
+2.times do |n|
   name = Faker::Name.name
   city = City.all.sample
   Theater.create!(name: name,
@@ -84,18 +84,18 @@ end
 end
 
 
-10.times do |n|
+2.times do |n|
   theater = Theater.first
   movie = Movie.all.sample
   time = Faker::Time.between(DateTime.now - 1, DateTime.now)
-  room = Room.all.sample
+  room = Theater.first.rooms.sample
   MovieTheater.create!(theater: theater,
                 movie: movie,
                 time: time,
                 room: room)
 end
 
-50.times do |n|
+5.times do |n|
   user = User.all.sample
   total = Faker::Number.number(5)
   Order.create!( user: user,

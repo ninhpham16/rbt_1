@@ -81,6 +81,21 @@ en:
       AYS: "Are you sure?"
       
   manager:
+    users:
+      user:
+        confirm: Block this user
+        sure: Unblock this user
+        lock: Lock
+        unlock: Unlock
+      index:
+        name: Name
+        fulln: Full name
+        email: Email
+        phone: Phone number
+        addr: Address
+        act: Action
+        all: All users
+        
     theaters:
       new: 
         title: "New theater"
