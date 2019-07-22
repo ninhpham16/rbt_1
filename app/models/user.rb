@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :reviews, dependent: :destroy
+
+  def active_for_authentication?
+    super && !deactivated
+  end
 end

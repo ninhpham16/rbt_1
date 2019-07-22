@@ -2,23 +2,25 @@
   .card.shadow.mb-4
     .card-header.py-3
       h6.m-0.font-weight-bold.text-primary
-        | All users
+        = t(".all")
 row
   .col-sm-12
     table.table.table-striped
       thead
         tr[role="row"]
           th.sorting_asc[style="width: 20px;"]
-            | Name
+            = t(".name")
           th.sorting[style="width: 70px;"]
-            | Full Name
+            = t(".fulln")
           th.sorting[style="width: 70px;"]
-            | Email
+            = t(".email")
           th.sorting[style="width: 70px;"]
-            | Phone_number
+            = t(".phone")
           th.sorting[style="width: 70px;"]
-            | Address
-      tbody 
+            = t(".addr")
+          th.sorting[style="width: 70px;"]
+            = t(".act")
+      tbody#users 
         = render @users
   .col-sm-12.col-md-7
     #dataTable_paginate.dataTables_paginate.paging_simple_numbers
