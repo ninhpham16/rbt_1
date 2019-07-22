@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+
   before_action :find_movie_theater, only: %i[new]
   before_action :authenticate_user!
 
@@ -42,5 +43,5 @@ class OrdersController < ApplicationController
   def identify_room
     @room = @movie_theater.room
     @seats = @room.seats.pluck(:id, :name, :available)
-  end
+  end 
 end
