@@ -1,0 +1,7 @@
+.container
+  .row
+    .col-md-12.mt-4.text-center
+      h2
+        = t ".success"
+      = form_tag payment_path, method: :post do
+        = submit_tag t(".pay"), class: "btn btn-primary"
