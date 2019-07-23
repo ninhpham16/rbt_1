@@ -3,9 +3,10 @@ module Manager
     skip_before_action :verify_authenticity_token
     before_action :find_room, only: %i[show edit update destroy]
     before_action :find_seats, only: %i[show edit]
+    before_action :order, only: %i[update create]
 
     def index
-      @rooms = Room.all.order(updated_at: :desc).page(params[:page]).per Settings.per_page_rooms
+      @rooms = Room.order(created_at: :desc).page(params[:page]).per Settings.per_page_rooms
     end
 
     def show; end
@@ -21,11 +22,13 @@ module Manager
       if @room.save
         room_id = @room.id
         create_30_seats room_id
-        flash[:success] = t ".success"
-        redirect_to manager_room_path(room_id)
+        respond_to do |format|
+          format.html
+          format.js
+        end
       else
         flash[:danger] = t ".failed"
-        render "new"
+        render :new
       end
     end
 
@@ -35,8 +38,10 @@ module Manager
 
     def update
       if @room.update room_params
-        flash[:success] = t ".success"
-        redirect_to manager_rooms_path
+        respond_to do |format|
+          format.html
+          format.js
+        end
       else
         flash[:danger] = t ".failed"
         render "edit"
@@ -73,6 +78,10 @@ module Manager
 
     def find_seats
       @seats = @room.seats.pluck(:id, :name, :available)
+    end
+
+    def order
+      @rooms = Room.order(created_at: :desc)
     end
   end
 end

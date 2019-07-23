@@ -21,7 +21,7 @@ class StaticPagesController < ApplicationController
   def show_city
     movie_theaters = Movie.find(params[:movie]).movie_theaters.date_like(params[:date])
     theater_ids = movie_theaters.pluck(:theater_id).uniq
-    city_ids = Theater.where(theater_id: theater_ids).pluck(:city_id)
+    city_ids = Theater.where(id: theater_ids).pluck(:city_id)
     @cities = City.where(id: city_ids)
   end
 

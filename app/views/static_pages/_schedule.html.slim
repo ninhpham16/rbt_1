@@ -22,7 +22,7 @@
           .mt-2
             .mb-1
             - @movie_theaters.each do |movie_theater|
-              a.btn.btn-sm.btn-showtime.btn-outline-dark.is-ticketing href = new_order_path(movie_theater_id: movie_theater.id)
+              = link_to new_order_path(movie_theater_id: movie_theater.id), class: "btn btn-sm btn-showtime btn-outline-dark is-ticketing" do
                 span.time #{movie_theater.time.strftime("%H:%M")}
       br
     .row
