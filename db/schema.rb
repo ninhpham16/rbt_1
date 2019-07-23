@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_22_062528) do
+ActiveRecord::Schema.define(version: 2019_07_23_075419) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -121,6 +121,16 @@ ActiveRecord::Schema.define(version: 2019_07_22_062528) do
     t.index ["room_id"], name: "index_seats_on_room_id"
   end
 
+  create_table "showtime_seats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "movie_theater_id"
+    t.bigint "seat_id"
+    t.boolean "seat_available"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["movie_theater_id"], name: "index_showtime_seats_on_movie_theater_id"
+    t.index ["seat_id"], name: "index_showtime_seats_on_seat_id"
+  end
+
   create_table "theaters", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.bigint "city_id"
@@ -155,5 +165,7 @@ ActiveRecord::Schema.define(version: 2019_07_22_062528) do
   add_foreign_key "order_items", "seats"
   add_foreign_key "orders", "users"
   add_foreign_key "rooms", "theaters"
+  add_foreign_key "showtime_seats", "movie_theaters"
+  add_foreign_key "showtime_seats", "seats"
   add_foreign_key "theaters", "cities"
 end
