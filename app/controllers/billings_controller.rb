@@ -31,7 +31,7 @@ class BillingsController < ApplicationController
   def payment
     customer = Stripe::Customer.new current_user.stripe_id
     @payment = Stripe::Charge.create customer: customer.id,
-                                     amount: current_user.orders.last.total/10,
+                                     amount: current_user.orders.last.total / 10,
                                      description: "Payments",
                                      currency: "usd"
     @payment.save
