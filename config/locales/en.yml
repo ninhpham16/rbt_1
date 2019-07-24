@@ -188,6 +188,10 @@ en:
       new:
         title: "Create Showtime"
         button: "Create"
+      form:
+        title: "Showtimes"
+        select-theater: "Select Theater"
+        select-room: "Select Room"
       index:
         title: "List Showtimes"
         time: "Time"

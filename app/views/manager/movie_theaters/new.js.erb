@@ -1,3 +1,5 @@
-$("#showtimeModal").html("<%= j render 'new' %>");
-$("#showtimeModalNew").modal("show");
+$("#showtimeModal").html("<%= j render 'new' %>")
+$("#showtimeModalNew").modal("show")
+var rooms = $('#movie_theater_room_id').html();
+myGetrooms(rooms);
 jQuery('#datetimepicker').datetimepicker();

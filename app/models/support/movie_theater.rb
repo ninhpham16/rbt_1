@@ -17,5 +17,9 @@ module Support
     def cities
       @cities ||= City.all
     end
+
+    def allTheaters
+      @all_theaters ||= Theater.all
+    end
   end
 end
