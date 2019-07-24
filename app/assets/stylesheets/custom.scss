@@ -231,3 +231,158 @@ a.btn.btn-light.text-muted.date {
     font-family: sans-serif;
   }
 }
+
+.container2{
+  max-width: 1250px;
+  position: relative;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.fh5co-text {
+  height: 100px;
+  text-align: center;
+  p{
+    color: #45ab3d !important; 
+    font-weight: bold;
+    text-shadow: 0.1em 0.1em 0.2em #000; 
+  }
+}
+
+.btn-ticket{
+  text-align: center;
+  border-radius: 5px;
+  a{
+    color: #fff !important;
+    font-size: 15px !important;
+    padding: 10px 25%;
+    background: #45ab3d;
+    border-radius: 5px;
+    &:hover{
+      color: #45ab3d !important;
+      background: #f8f8f8;
+      border: 1.5px solid #45ab3d ;
+    }
+  }
+
+}
+
+.fh5co-card-item {
+  margin-bottom: 10px !important;
+}
+
+.gtco-section {
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.gtco-nav {
+  border-bottom: none !important;
+  input{
+    padding: 1px 50px !important;
+  }
+  ul.nav-menu{
+    margin-top: 10px !important;
+  }
+}
+.gtco-quick-contact a{
+  color: #fbb448 !important;
+}
+
+.lgo-btn{
+  float: right;
+}
+header#gtco-footer{
+  background-image: url(space.jpg);
+  background-size: contain;
+}
+footer#gtco-footer{
+  background-image: url(bg-grid.jpg);
+}
+.border-bg{
+  background: #02121d;
+}
+.line {
+  width: 30%;
+  border-radius: 10px;
+  height: 3px; 
+  position :relative;
+  -webkit-animation: mymove 6s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 10s infinite;
+}
+@keyframes mymove {
+  0% {left: 0px;background: #02121d;}
+  25% {left: 40%;background: white;}
+  50% {left: 70%;background: #02121d;}
+  75% {left: 30%;background: white;}
+  100% {left: 0px;background: #02121d;}
+}
+
+.search-input{
+  background-color: white;
+}
+
+.bg-img{
+  background-image: url(star.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 60px;
+}
+
+#show-movie{
+  .container{
+    width: 60%;
+    background: none !important;
+    box-shadow: none !important;
+    margin-top: 0px;
+    padding-top: 20px;
+    p{
+      font-size: 34.65px;
+      color: white;
+      text-shadow: 0.1em 0.1em 0.2em #000; 
+    } 
+  }
+  h1{
+    font-size: 43px;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.2em #000; 
+  }
+  #des{
+    margin-bottom: 10px;
+  }
+  #review-form{
+    label{
+      color: white;
+      text-shadow: 0.1em 0.1em 0.2em #000; 
+    }
+  }
+  .hang{
+    margin-top: 10px;
+    text-align: center;
+    a{
+      margin: 0 20px;
+    }
+  }
+}
+
+#review-form{
+  .container{
+    padding-top: 0px !important;
+  }
+}
+
+#reviews{
+  .container{
+    border-top: 1px solid #fff !important;
+    border-bottom: 1px solid #fff !important;
+  }
+}
+
+#show-movie  {
+  #text1{
+    .container{
+      padding: 10px !important;
+    }
+  }
+}

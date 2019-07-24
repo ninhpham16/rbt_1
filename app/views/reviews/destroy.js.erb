@@ -1,2 +1,6 @@
-  $("#review-list").html("<%= j render partial: "reviews/review", collection: @reviews, as: :review %>");
-  toastr["info"]('<%= t(".deleted") %>');
+$("#review-list").html("<%= j render partial: "reviews/review", collection: @reviews, as: :review %>");
+toastr["info"]('<%= t(".deleted") %>');
+<%if @reviews.size == 0%>
+  $("#review-list").html("<p>There are no reviews yet</p>");
+  $("#review-form").html("<%= j render "reviews/form", review: @movie.reviews.build %>");
+<%end%>

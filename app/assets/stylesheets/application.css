@@ -14,4 +14,6 @@
  *= require_self
  *= require lib/material-design-iconic-font1.min
  *= require lib/style
+ *= require lib/slick
+ *= require lib/slick-theme
  */

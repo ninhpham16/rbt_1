@@ -1,6 +1,6 @@
 module Manager
   class UsersController < Manager::BaseController
-    skip_before_action :verify_authenticity_token
+  skip_before_action :verify_authenticity_token
 
     def index
       @users = User.page params[:page]
