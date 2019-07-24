@@ -25,6 +25,7 @@ en:
       payment: "Payment"
       movie: "Movie : "
       total: "Total : "
+      room: "Room : "
     index:
       title: "Transactions history"
       view: "View"
@@ -271,6 +272,13 @@ en:
         confirm: "Are you sure"
         show: "Show"
         edit: "Edit"
+
+    static_pages:
+      index:
+        user: "Users register"
+        theater: "Revenue all theaters of day"
+        movie: "New movies of week"
+
   movie_theaters:
     show:
       name: "Name: "
