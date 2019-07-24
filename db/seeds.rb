@@ -42,7 +42,7 @@ room2 = Room.create!(name: "Spring_HCM", theater_id: Theater.second.id)
 end
 
 10.times do |n|
-  name = Faker::Movie.quote
+  name = Faker::Movie.unique.quote
   category = Category.first
   Movie.create!(name: name,
                 available: true,

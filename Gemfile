@@ -26,6 +26,8 @@ gem "paperclip"
 gem "toastr-rails"
 gem "ransack"
 gem "stripe-rails"
+gem "chartkick"
+gem 'groupdate'
 group :development, :test do
   gem "faker"
   gem "pry-rails"

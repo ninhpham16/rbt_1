@@ -3,7 +3,7 @@ class Movie < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :movie_theaters, dependent: :destroy
 
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
   validates :category_id, presence: true
   has_attached_file :image
   validates_attachment :image,
