@@ -17,3 +17,4 @@
 //= require lib/main1
 //= require rate.min
 //= require lib/jquery.raty
+//= require lib/slick.min

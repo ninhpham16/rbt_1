@@ -45,7 +45,9 @@ en:
       res_now: "Reserve now"
       onstage: "Onstage Movies"
       notice: "All those movies are available now on our theaters"
-  
+    movie:
+      pur: "Book"
+
   movies:
     show:
       director: "Director: "
@@ -56,6 +58,7 @@ en:
       descrip: "Description: "
       trailer: "Trailer"
       book: "Book Tickets"
+      bok: "Book"
   
   users:
     edit:

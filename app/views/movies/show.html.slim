@@ -1,53 +1,56 @@
-center
-  h1 = @movie.name
-.container
-  .col-md-4
-    = image_tag "toy.jpg"
-  .col-md-8
-    h3 
-      strong 
-        = t ".director"
-      = @movie.director
-    h3
-      strong 
-        = t ".category"
-      = @movie.category.name
-    h3
-      strong 
-        = t ".actor"
-      = @movie.actor
-    h3
-      strong 
-        = t ".release"
-      = @movie.release
-    h3
-      strong 
-        = t "rated"
-      = @movie.rated
-    h3 
-      strong 
-        = t ".descrip"
-      =@movie.description
-    .col-md-2.mr-5
-      = link_to t(".trailer"),"#", class: "btn btn-danger"
-    .col-md-3
-      = link_to t("book"), {controller: "static_pages", action: "date", movie: @movie.id }, remote: true, class: "btn btn-success"
-.container
-  #date_movie
-.container
-  #city_movie
-.container
-  #show_theater
-.container
-  #show_showtime
-#tab-reviews.woocommerce-Tabs-panel--reviews.wc-tab
-  #reviews
-    #comments
-      h2.woocommerce-Reviews-title
-      .container
-        #review-list
-          - if @movie.reviews.count > 0
-              = render partial: "reviews/review", collection: @reviews, as: :review  
-      br       
-    #review-form
-      = render "reviews/form", review: @review
+#show-movie  
+  .bg-img
+    .container
+      .col-md-4
+        - if !@movie.image_file_name.nil?
+          = image_tag @movie.image.url
+        -else 
+          = image_tag "https://image2.tin247.com/pictures/2019/07/05/baw1562286616.jpg"
+        .hang
+          = link_to t(".trailer"),"#", class: "btn btn-danger"
+          = link_to t(".bok"), {controller: "static_pages", action: "date", movie: @movie.id }, remote: true, class: "btn btn-success"
+      .col-md-8 
+        h1 
+          strong
+            = @movie.name
+        p         
+          = t ".director" 
+          = @movie.director
+        p         
+          = t ".category"
+          = @movie.category.name
+        p         
+          = t ".actor"
+          = @movie.actor
+        p         
+          = t ".release"
+          = @movie.release
+        p
+          = t "rated"
+          = @movie.rated
+        p
+          = t ".descrip"
+          =@movie.description
+    .container
+      #date_movie
+    .container
+      #city_movie
+    .container
+      #show_theater
+    .container
+      #show_showtime
+    #tab-reviews.woocommerce-Tabs-panel--reviews.wc-tab
+      #reviews
+        #comments
+          h2.woocommerce-Reviews-title
+          #text1
+            .container
+              #review-list
+                - if @movie.reviews.count > 0
+                  = render partial: "reviews/review", collection: @reviews, as: :review
+                - else
+                  p There are no reviews yet  
+          br       
+        #review-form
+          = render "reviews/form", review: @review
+          br

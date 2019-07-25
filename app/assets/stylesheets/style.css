@@ -662,7 +662,7 @@ form label {
 }
 
 .primary-color {
-  color: #FBB448 !important;
+  color: #FFFF !important;
 }
 
 #gtco-header .display-tc,
@@ -916,7 +916,7 @@ form label {
 .gtco-heading p {
   font-size: 20px;
   line-height: 1.5;
-  color: gray;
+  color: white;
 }
 
 #gtco-products {
@@ -996,9 +996,6 @@ form label {
 
 #gtco-footer {
   background-color: #333333;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 #gtco-footer .overlay {
   position: absolute;
@@ -1069,9 +1066,7 @@ form label {
 }
 #gtco-footer .copyright {
   color: #666666;
-  padding-top: 3em;
-  margin-top: 3em;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2em;
 }
 @media screen and (max-width: 768px) {
   #gtco-footer .copyright .pull-left,
@@ -1529,10 +1524,6 @@ form label {
   }
 }
 
-.row-pb-md {
-  padding-bottom: 4em !important;
-}
-
 .row-pb-sm {
   padding-bottom: 2em !important;
 }
@@ -1728,7 +1719,6 @@ form label {
   transition: 0.3s;
 }
 .fh5co-card-item figure {
-  height: 240px;
   overflow: hidden;
   z-index: 12;
   position: relative;
@@ -1742,7 +1732,6 @@ form label {
   right: 0;
   bottom: 0;
   position: absolute;
-  background: rgba(0, 0, 0, 0.4);
   -webkit-transition: 0.7s;
   -o-transition: 0.7s;
   transition: 0.7s;
