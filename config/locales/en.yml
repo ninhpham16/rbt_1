@@ -31,7 +31,10 @@ en:
       view: "View"
     new:
       booking: "Booking"
-
+  user_mailer:
+    welcome_send:
+      user: "User Profile"
+      welcome: "Welcome to my site"
   static_pages:
     home:
       contact: "Contact us on "

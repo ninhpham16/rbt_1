@@ -5,8 +5,13 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :orders
   has_many :reviews, dependent: :destroy
-
+  after_create :welcome_send
+  
   def active_for_authentication?
     super && !deactivated
+  end
+
+  def welcome_send
+    HardWorker.perform_async(self.id)
   end
 end
