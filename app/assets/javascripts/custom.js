@@ -14,4 +14,10 @@ $(document).ready(function(){
     slidesToShow: 4,
     slidesToScroll: 4
   });
+  
+  $("#booking").prop('disabled', true);
+  $(":checkbox").on("change", function(){
+    $(":checkbox").is(':checked') ? $("#booking").prop('disabled', false) : $("#booking").prop('disabled', true)
+    $(this).is(':checked') ? $(this).parent().css('background-color','brown') : $(this).parent().css('background-color', '')
+  });
 })
