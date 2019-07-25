@@ -1,0 +1,7 @@
+h1
+  | #{t(".hello")} #{@user.name}
+span 
+  h5 
+    = t(".ordered")
+p
+  = link_to t(".od"), orders_url(@order)
