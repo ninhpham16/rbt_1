@@ -6,12 +6,12 @@ class User < ApplicationRecord
   has_many :orders, dependent: :destroy
   has_many :reviews, dependent: :destroy
   after_create :welcome_send
-  
+
   def active_for_authentication?
     super && !deactivated
   end
 
   def welcome_send
-    HardWorker.perform_async(self.id)
+    HardWorker.perform_async(id)
   end
 end

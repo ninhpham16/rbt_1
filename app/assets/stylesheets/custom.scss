@@ -131,21 +131,25 @@ label#remember {
     border-color: red;
     text-align: center;
     color: black;
-      label{
-        width: 100%;
-        height: 100%;
-        font-size: 1em;
-        margin-bottom: 0px;
-        color: #727680;
-      }
-      input{
-        display: none;
-      }
+    label{
+      width: 100%;
+      height: 100%;
+      font-size: 1em;
+      margin-bottom: 0px;
+      color: #727680;
+      cursor: pointer;
+    }
+    input{
+      display: none;
+    }
   }
 }
-.show-room .seat:hover {
-  background-color: aqua;
-  color: gray;
+
+.show-room {
+  .seat {
+    cursor: pointer;
+    color: gray;
+  }
 }
 
 .show-room #first_col, 
@@ -273,8 +277,8 @@ a.btn.btn-light.text-muted.date {
 }
 
 .gtco-section {
-    background-size: cover;
-    background-attachment: fixed;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .gtco-nav {
@@ -384,5 +388,17 @@ footer#gtco-footer{
     .container{
       padding: 10px !important;
     }
+  }
+}
+
+.order-item-page .picked {
+  background-color: #bcbcbc;
+}
+.order-item-page .picked {
+  label{
+    cursor: not-allowed !important;
+  }
+  &:hover{
+    background-color: #bcbdbc !important;
   }
 }

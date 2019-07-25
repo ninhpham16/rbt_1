@@ -26,6 +26,7 @@ User.create!(name: name,
             password_confirmation: password
             )
 end
+
 city = City.create!(name: "HaNoi")
 city1 = City.create!(name: "HCM")
 
@@ -81,6 +82,9 @@ create_30_seats room2.id
 
 create_showtime_seats room.id, movie_theater.id
 create_showtime_seats room2.id, movie_theater1.id
+
+ShowtimeSeat.first.update_attributes(seat_available: false)
+ShowtimeSeat.last.update_attributes(seat_available: false)
 
 10.times do
   name = Faker::Address.unique.city
