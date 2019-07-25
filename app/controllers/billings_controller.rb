@@ -35,6 +35,9 @@ class BillingsController < ApplicationController
                                      description: "Payments",
                                      currency: "usd"
     @payment.save
+    @user = current_user
+    @order = Order.last
+    OrderMailer.order_mail(@order, @user).deliver_now if current_user.present?
     flash[:success] = t ".success"
     redirect_to root_url
   end

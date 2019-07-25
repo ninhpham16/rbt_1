@@ -35,6 +35,12 @@ en:
     welcome_send:
       user: "User Profile"
       welcome: "Welcome to my site"
+  order_mailer:
+    ordered: "You have successfully ordered"
+    order_mail: 
+      od: "Tracking_your_order"
+      ordered: "You have successfully ordered"
+      hello: "Hello"
   static_pages:
     home:
       contact: "Contact us on "
