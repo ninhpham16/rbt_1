@@ -11,10 +11,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
 //= require rails-ujs
 //= require lib/popper.min
-//= require lib/jquery-3.2.1.min
+//= require lib/jquery.min
 //= require lib/animsition.min
 //= require lib/bootstrap.bundle.min
 //= require lib/bootstrap.min
@@ -29,3 +28,4 @@
 //= require manager/datatable
 //= require chartkick
 //= require Chart.bundle
+//= require manager/movie_theaters

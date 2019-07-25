@@ -49,7 +49,20 @@ end
                 category: category)
 end
 time = Faker::Time.between(DateTime.now - 1, DateTime.now)
-movie_theater = MovieTheater.create!(theater_id: Theater.all.sample.id, movie_id: Movie.first.id, room_id: Room.all.sample.id, time: time)
+
+movie_theater = MovieTheater.create!(theater_id: theater.id, movie_id: Movie.first.id, room_id: room.id, time: time)
+movie_theater1 = MovieTheater.create!(theater_id: theater1.id, movie_id: Movie.second.id, room_id: room2.id, time: time)
+
+def create_showtime_seats room_id, movie_theater_id
+  room = Room.find room_id
+  room.seats.each do |seat|
+    showtime_seat = ShowtimeSeat.new
+    showtime_seat.movie_theater_id = movie_theater_id
+    showtime_seat.seat_id = seat.id
+    showtime_seat.seat_available = seat.available
+    showtime_seat.save
+  end
+end
 
 def create_30_seats room_id
   for row in ("A".."E") do
@@ -66,6 +79,9 @@ end
 create_30_seats room.id
 create_30_seats room2.id
 
+create_showtime_seats room.id, movie_theater.id
+create_showtime_seats room2.id, movie_theater1.id
+
 10.times do
   name = Faker::Address.unique.city
   City.create(name: name)
@@ -81,18 +97,6 @@ end
   city = City.all.sample
   Theater.create!(name: name,
                   city: city)
-end
-
-
-2.times do |n|
-  theater = Theater.first
-  movie = Movie.all.sample
-  time = Faker::Time.between(DateTime.now - 1, DateTime.now)
-  room = Theater.first.rooms.sample
-  MovieTheater.create!(theater: theater,
-                movie: movie,
-                time: time,
-                room: room)
 end
 
 5.times do |n|

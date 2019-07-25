@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get "/success" => "billings#success", as: :success
   post "/payment" => "billings#payment", as: :payment
 
+  get "/manager/movie_theaters/get_rooms", to: "manager/movie_theaters#get_rooms"
   namespace :manager do
     root "static_pages#index"
     resources :categories

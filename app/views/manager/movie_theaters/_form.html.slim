@@ -12,15 +12,15 @@
     .form-group.box-select
       = f.label :theater
       br
-      = f.select :theater_id, @support_movie_theater.theaters
+      = f.select :theater_id, @support_movie_theater.theaters, prompt: t(".select-theater")
     .form-group.box-select
       = f.label :movie
       br
       = f.select :movie_id, @support_movie_theater.movies
-    .form-group.box-select
+    #room_selection.form-group.box-select
       = f.label :room
       br
-      = f.select :room_id, @support_movie_theater.rooms
+      = f.grouped_collection_select :room_id, @support_movie_theater.allTheaters, :rooms, :name, :id, :name, prompt: t(".select-room")
     .form-group
-      = f.submit yield(:button_text), remote: true, class: "btn btn-info"
+      = f.submit yield(:button_text), class: "btn btn-info"
       br

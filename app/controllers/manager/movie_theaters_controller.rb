@@ -1,7 +1,7 @@
 module Manager
   class MovieTheatersController < Manager::BaseController
     skip_before_action :verify_authenticity_token
-    before_action :find_movie_theater, except: %i[index new create]
+    before_action :find_movie_theater, except: %i[index new create get_rooms]
     before_action :order, only: %i[create update]
 
     def index
@@ -51,6 +51,10 @@ module Manager
       else
         render "edit"
       end
+    end
+
+    def get_rooms
+      @theater = Theater.find params[:theater_id]
     end
 
     private
