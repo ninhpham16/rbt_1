@@ -1,9 +1,10 @@
 $(document).ready(function(){
+  $("#booking").prop('disabled', true);
   $(":checkbox").on("change", function(){
-    if($(this).is(':checked'))
-      $(this).parent().css('background-color','brown');
-    else
-      $(this).parent().css('background-color', '');
+    $(":checkbox").is(':checked') ? $("#booking").prop('disabled', false) : 
+      $("#booking").prop('disabled', true)
+    $(this).is(':checked') ? $(this).parent().css('background-color','brown') :
+      $(this).parent().css('background-color', '')
   });
   $('.multiple-items').slick({
     infinite: true,

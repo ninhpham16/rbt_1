@@ -27,9 +27,9 @@ gem "toastr-rails"
 gem "ransack"
 gem "stripe-rails"
 gem "chartkick"
-gem 'groupdate'
-gem 'dotenv-rails'
-gem 'sidekiq'
+gem "groupdate"
+gem "dotenv-rails"
+gem "sidekiq"
 group :development, :test do
   gem "faker"
   gem "pry-rails"

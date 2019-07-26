@@ -31,6 +31,11 @@ en:
       view: "View"
     new:
       booking: "Booking"
+      title: "Booking online"
+      screen: "Screen"
+      lblChecked: "Checked"
+      lblFree: "Free"
+      lblPicked: "Picked"
   user_mailer:
     welcome_send:
       user: "User Profile"
