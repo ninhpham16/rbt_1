@@ -40,6 +40,8 @@ module Manager
       @movie_theater = MovieTheater.find params[:id]
       @showtime_seats = @movie_theater.showtime_seats
       find_seats @showtime_seats
+      suatchieu = ShowtimeSeat.where(id: @seats)
+      @chair = suatchieu.pluck(:seat_id)
     end
 
     def update
