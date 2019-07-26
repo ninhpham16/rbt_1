@@ -30,14 +30,21 @@ class BillingsController < ApplicationController
 
   def payment
     customer = Stripe::Customer.new current_user.stripe_id
+    order = current_user.orders.last
     @payment = Stripe::Charge.create customer: customer.id,
-                                     amount: current_user.orders.last.total / 10,
+                                     amount: order.total / 10,
                                      description: "Payments",
                                      currency: "usd"
     @payment.save
-    @user = current_user
-    @order = Order.last
-    OrderMailer.order_mail(@order, @user).deliver_now if current_user.present?
+    OrderMailer.order_mail(order, current_user).deliver_now if current_user.present?
+    order.order_status = true
+    order.save
+    paid_seats = order.order_items.first.movie_theater.showtime_seats
+                      .where(seat_id: order.order_items.pluck(:seat_id))
+    paid_seats.each do |seat|
+      seat.seat_available = false
+      seat.save
+    end
     flash[:success] = t ".success"
     redirect_to root_url
   end
