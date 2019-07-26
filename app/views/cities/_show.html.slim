@@ -1,7 +1,7 @@
 = image_tag "ruby_icon.jpg", class: "rounded-circle float-left mr-3", width: 24
-= t(".cinema")
+h4 = t(".cinema")
 - if @theaters.blank?
-  .list-group-item
-    = t(".nil")
+  .alert.alert-info
+    p = t(".nil")
 - else
   = render partial: "theater", collection: @theaters, as: :theater

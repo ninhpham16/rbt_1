@@ -155,7 +155,7 @@ label#remember {
 .show-room #first_col, 
 .show-room th {
   border-style: none;
-  color: black;
+  color: #fff !important;
   font-size: 1em;
   height: 100%;
 }
@@ -196,16 +196,19 @@ a.btn.btn-light.text-muted.date {
 
 .order-item-page .screen {
   font-family: cursive;
-  color: gray;
+  color: rgb(66, 54, 54);
   line-height: 1;
   text-align: center;
-  background-color: bisque;
+  background-color: gray;
   border: solid 0.5px gray;
-  width: 450px;
+  width: 430px;
   height: 30px;
   margin-left: 200px;
-  border-radius: 50%;
   font-size: x-large;
+}
+
+.order-item-page input {
+  width: 30%;
 }
 
 .seat-status {
@@ -402,3 +405,135 @@ footer#gtco-footer{
     background-color: #bcbdbc !important;
   }
 }
+#index-city{
+  background-image: url('star.jpg');
+  height: 590px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  .list-group-item > .badge {
+    float: right;
+    margin-right: 29px;
+  }
+  .color-555 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .align-items-center {
+    border: none !important;
+    background: none;
+  }
+  .card{
+    background: none;
+    border: none;
+  }
+  h2{
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .city-info{
+    .list-group-item:hover{
+      background:   !important;
+      border-radius: 10px;
+      a{
+        color: #fff;
+        text-shadow: none;
+      }
+    }
+  }
+  .city-info, .theater-info {
+    width: 80%;
+    margin: auto;
+    padding-top: 71px;
+  }
+
+  #theaters {
+    margin-top: 80px;
+    border-top: 3px solid #a29898;
+    padding-top: 25px;
+    h4{
+      float: left;
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .text-truncate.btn-choose-cinema{
+      background: none;
+      border: none;
+      a{
+        color: #fff;
+        font-size: 16px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.index-orders{
+  padding-top: 60px;
+  background-image: url('star.jpg') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  .container{
+    background: none;
+  }
+  h4, p, span{
+    color: #a6b2c9 !important;
+  }
+  h4{
+    font-size: 30px;
+  }
+  span{
+    margin-right: 8px;
+  }
+  span, p{
+    font-size: 14px;
+  }
+  ul.pagination{
+    padding-bottom: 40px;
+  }
+}
+
+.show-theater{
+  background-image: url('star.jpg') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  .container{
+    background: none;
+  }
+  .card{
+    margin-bottom: 15px;
+    background: none;
+    border: none;
+  }
+  .btn-outline-dark.is-ticketing{
+    background: #fff
+  }
+  a:first-child{
+    color: #fff;
+    font-size: 18px;
+  }
+}
+
+.order-item-page{
+  background-image: url('star.jpg') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  h1, h2, span, td{
+    color: #fff;
+  }
+  form.new_order{
+    text-align: center;
+  }
+  input#booking{
+    margin: 20px auto !important;
+  }
+}
+
+
