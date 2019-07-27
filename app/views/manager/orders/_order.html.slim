@@ -4,9 +4,14 @@ tr
   td
     = order.user.name
   td
-    = order.created_at.strftime("%d/%m/%Y, %H:%M")
+    | #{order.order_items.first.movie_theater.theater.city.name} - #{order.order_items.first.movie_theater.theater.name}
   td
-    = order.order_items.first.movie_theater.theater.name
+    - if order.order_status == false
+      = t(".pending")
+    - else
+      = t(".success")
+  td
+    = order.created_at.strftime("%d/%m/%Y, %H:%M")
   td
     = link_to manager_order_path(order), remote: true, class: "btn btn-info mr-5" do
       = t(".details") 

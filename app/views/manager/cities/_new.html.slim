@@ -7,12 +7,5 @@
           span aria-hidden="true"  
             i.fas.fa-times
       .modal-body
-        = form_for [:manager, @city], remote: true do |f|
-          = render "shared/error_messages", object: f.object
-          .form-group
-            = f.label :name
-            = f.text_field :name, class: "form-control"
-          .form-group
-            = f.submit t(".button"), id: "create", remote: true, class: "btn btn-info add-new-city"
-            br
-
+        = render "form"
+          br

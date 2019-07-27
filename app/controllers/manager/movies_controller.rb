@@ -4,7 +4,7 @@ module Manager
     before_action :find_movie, except: %i[index new create]
     before_action :all_categories, only: %i[new edit]
     def index
-      @movies = Movie.all.page(params[:page]).per Settings.per_page_movies
+      @movies = Movie.order(updated_at: :desc).page(params[:page]).per Settings.per_page_movies
     end
 
     def new
@@ -14,6 +14,7 @@ module Manager
 
     def create
       @movie = Movie.new movie_params
+      @movies = Movie.order(updated_at: :desc).page(params[:page]).per Settings.per_page_movies
       if @movie.save
         respond_to do |format|
           format.html
@@ -21,8 +22,8 @@ module Manager
         end
         @movies = Movie.all.order(created_at: :desc)
       else
-        flash[:danger] = t ".fails"
-        render "new"
+        @categories = Category.all
+        render "form"
       end
     end
 

@@ -8,7 +8,6 @@ module Manager
 
     def show
       @order = Order.find params[:id]
-      @order_items = @order.order_items
       respond_to do |format|
         format.html
         format.js
