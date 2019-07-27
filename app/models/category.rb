@@ -3,20 +3,19 @@ class Category < ApplicationRecord
   validates :name, presence: true, uniqueness: true
 
   class << self
-    def import(file)
-      CSV.foreach(file.path, headers:true) do |row|
+    def import file
+      CSV.foreach(file.path, headers: true) do |row|
         Category.create! row.to_hash
       end
     end
-  
+
     def as_csv
       CSV.generate do |csv|
         csv << column_names
-        all.each do |category|
+        all.find_each do |category|
           csv << category.attributes.values_at(*column_names)
         end
       end
     end
   end
-
 end

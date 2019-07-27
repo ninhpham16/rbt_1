@@ -10,22 +10,8 @@ table.table.table-condensed
         th = t".image"
         th = t".update"
         th = t".delete"
-    tbody
-      - @movies.each do |movie|
-        tr
-          td 
-            strong = link_to movie.name,""
-          td = movie.category.name
-          td
-            = movie.created_at.day
-            | /
-            = movie.created_at.month
-            | /
-            =movie.created_at.year
-          td = link_to t(".trailer"),movie.trailer, target: :_blank
-          td = image_tag src=movie.image.url, width: "55px", height: "75px"
-          td = link_to t(".update"), edit_manager_movie_path(movie),remote: true, class: "btn btn-primary"
-          td = link_to t(".delete"),manager_movie_path(movie),method: :delete,
-            data: { confirm: t(".confirm")}, class: "btn btn-danger"          
+    tbody#movie-body
+      = render @movies       
     table
+    = paginate @movies, theme: "twitter-bootstrap-4"
 #myModalIndex

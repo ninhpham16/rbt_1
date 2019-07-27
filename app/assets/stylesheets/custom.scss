@@ -561,3 +561,28 @@ div#index-city.success {
 input#success-payment {
   width: 80%
 }
+.comment_nested{
+  margin-left: 20px;
+}
+
+.form-comment{
+  box-shadow: none;
+  background: transparent;
+  border: 3px solid rgba(253, 2, 2, 0.1);
+  border-radius: 5px;
+  color: black;
+  height: 60px;
+  width: 500px; 
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  color: #fff !important;
+  border: 2px solid rgba(229, 255, 0, 0.2);
+}
+.btn-cmt{
+  width: 500px;
+  padding-left: 15px;
+  padding-right: 15px;
+}

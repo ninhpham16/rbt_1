@@ -15,8 +15,11 @@ module Manager
     def create
       @movie = Movie.new movie_params
       if @movie.save
-        flash[:success] = t ".success"
-        redirect_to manager_movies_path
+        respond_to do |format|
+          format.html
+          format.js
+        end
+        @movies = Movie.all.order(created_at: :desc)
       else
         flash[:danger] = t ".fails"
         render "new"

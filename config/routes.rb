@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   post "/card" => "billings#create_card", as: :create_payment_method
   get "/success" => "billings#success", as: :success
   post "/payment" => "billings#payment", as: :payment
+  get "/reply_new", to: "comments#reply_new"
 
   get "/manager/movie_theaters/get_rooms", to: "manager/movie_theaters#get_rooms"
   namespace :manager do
@@ -56,4 +57,5 @@ Rails.application.routes.draw do
 
   require 'sidekiq/web'
   mount Sidekiq::Web => "/sidekiq"
+  resources :comments
 end
