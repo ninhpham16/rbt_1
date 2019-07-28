@@ -169,12 +169,16 @@ en:
         th2: "Action"
         button: "Add category"
         confirm: "Are you sure ?"
+        import: "Import data"
+        download: "Download as CSV"
       destroy:
         success: "Successfully"
       update:
         success: "Update category successfully!"
       create:
         success: "Create category successfully!"
+      import:
+        success: "Import category successfully!"
 
     cities:
       create:
@@ -320,3 +324,8 @@ en:
       success: "You successfully linked a credit card to your account"
     payment:
       success: "Success"
+
+  importfile:
+    imports:
+      create:
+        success: "Import successfully !"

@@ -1,5 +1,9 @@
 .container.index-categories
   h1 = t".title"
+
+  = link_to manager_categories_path(format: :csv), class: "btn btn-primary download-file" do
+    i.fa.fa-download
+    span = t(".download")
   
   table.table.table-condensed
     thead
@@ -10,5 +14,11 @@
       = render partial: "category", collection: @categories, as: :category
     table
       = link_to t(".button"), new_manager_category_path, remote: true, class: "btn btn-success"
+
+  .import-data
+    = form_tag importfile_imports_path, multipart: true
+      = file_field_tag :file, accept: "text/csv"
+      = submit_tag t(".import"), class: "btn btn-info btn-sm"
+
 = paginate @categories, theme: "twitter-bootstrap-4"
 #categoryIndexModal
