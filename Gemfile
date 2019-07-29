@@ -30,6 +30,7 @@ gem "chartkick"
 gem "groupdate"
 gem "dotenv-rails"
 gem "sidekiq"
+gem "ckeditor", "4.1.3"
 group :development, :test do
   gem "faker"
   gem "pry-rails"

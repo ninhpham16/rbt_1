@@ -10,7 +10,7 @@
         .comment-text
           .star-rating data-score= review.rate 
           .description
-            = simple_format(review.content)
+            = raw review.content
             | &emsp;
             - if current_user == review.user
               = link_to t(".delete"), review, remote: true, data: { confirm: t(".AYS") }, method: :delete, class: "remove"
