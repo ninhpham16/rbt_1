@@ -7,7 +7,7 @@
         -else 
           = image_tag "https://image2.tin247.com/pictures/2019/07/05/baw1562286616.jpg"
         .hang
-          = link_to t(".trailer"),"#", class: "btn btn-danger"
+          = link_to t(".trailer"),@movie.trailer, class: "btn btn-danger popup-link"
           = link_to t(".bok"), {controller: "static_pages", action: "date", movie: @movie.id }, remote: true, class: "btn btn-success"
       .col-md-8 
         h1 
