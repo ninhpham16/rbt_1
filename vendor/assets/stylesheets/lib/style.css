@@ -320,7 +320,7 @@ input {
   border-bottom: 1px solid #e8e8e8;
   border-radius: 5px;
   color:  #fffcfc;
-  background-color: #403c3c;
+  background-color: #de1717;
   font-size: 20px;
   padding: 6px 50px;
   font-family: Poppins;
@@ -517,8 +517,7 @@ label.valid {
     max-width: 100%; } }
 @media screen and (min-width: 1024px) {
   .container {
-    max-width: 1200px;
-    margin-top: 20px; } }
+    max-width: 1200px;} }
 @media screen and (max-width: 768px) {
   .signup-content, .signin-content {
     flex-direction: column;

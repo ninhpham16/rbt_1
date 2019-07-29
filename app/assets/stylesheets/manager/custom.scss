@@ -67,12 +67,10 @@ label#checkbox {
 }
 
 .sidebar{
-  min-height: 165vh !important;
+  width: 18rem !important;
+  overflow-y: scroll;
 }
 
-#wrapper #content-wrapper {
-  overflow-x: visible;
-}
 
 .download-file{
   margin-bottom: 15px;

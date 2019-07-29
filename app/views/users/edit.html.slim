@@ -1,9 +1,7 @@
-.container style=("border-bottom:1px solid black")
-  br
-  h1 = t".profile"
-.container
-  .jumbotron
-    .row
+#index-city.fileter
+  .container style="padding-left: 0px; padding-right: 0px;"
+    #index-city.fileter style=("border-bottom:1px solid black")
+      h1 = t".profile"
       = form_for current_user , url: user_path(current_user) do |f|
         = render "shared/error_messages", object: f.object
         .col-md-6.col-md-offset-1
@@ -21,6 +19,5 @@
               = f.password_field :password, class: "form-control"
               = f.label :password, t(".confirm")
               = f.password_field :password_confirmation, class: "form-control"
-              .col-md-6.col-md-offset-3
-                = f.submit t(".update"), class: "btn-edit"
+              = f.submit t(".update"), class: "btn-edit"
         br
