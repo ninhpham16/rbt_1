@@ -14,9 +14,9 @@
           td.seat
             = @seat_names[id].to_s
             br
-            |  #{t(".seat")} 
-            = @chair[id]
+            |  Seat_id: 
+            = @seats[id]
             br
-            |  #{t(".status")} 
+            |  Status: 
             = @showtime_seats[id][:seat_available].to_s
           - id +=1
