@@ -5,7 +5,13 @@ module Manager
     before_action :order, only: %i[create update]
 
     def index
-      @categories = Category.all.page(params[:page]).per Settings.per_page_categories
+      @categories = Category.all.page(params[:page]).order("created_at desc").per Settings.per_page_categories
+      @all = Category.all
+
+      respond_to do |format|
+        format.html
+        format.csv { send_data @all.as_csv }
+      end
     end
 
     def new

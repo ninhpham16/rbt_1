@@ -12,6 +12,7 @@ h1{
 .index-categories{
   margin-top: 15px;
   table{
+    margin-bottom: 20px;
     border-radius: 10px 10px 0px 0;
     border-collapse: collapse;
     overflow: hidden;
@@ -35,5 +36,9 @@ h1{
 }
 ul.pagination {
   margin-left: 15px;
+  margin-top: 20px;
+}
+
+.import-data{
   margin-top: 20px;
 }

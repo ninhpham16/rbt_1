@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   namespace :manager do
     root "static_pages#index"
     resources :categories
-    resources :users
+    resources :users 
     resources :cities
     resources :movies
     resources :rooms
@@ -38,6 +38,11 @@ Rails.application.routes.draw do
     resources :orders
     resources :showtime_seats
   end  
+
+  namespace :importfile do
+    resources :imports
+  end
+
 
   resources :movies, only: [:show, :index]
   resources :cities, only: [:index, :show]
