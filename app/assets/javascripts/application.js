@@ -18,3 +18,4 @@
 //= require rate.min
 //= require lib/jquery.raty
 //= require lib/slick.min
+//= require ckeditor/init

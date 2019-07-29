@@ -14,7 +14,7 @@
                 p.comment-form-comment
                   = f.label :content, t(".content"), class: "required"
                   br
-                  = f.text_area :content, id: "comment", style: "width: 100% !important"
+                  = f.text_area :content, id: "comment", style: "width: 100% !important", class: "ckeditor"
                   = f.submit t(".add"), class: "submit form-submit"
                 = render "shared/error_messages", object: f.object
         .clear
