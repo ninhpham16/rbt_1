@@ -82,3 +82,41 @@ label#checkbox {
   z-index: 100;
   margin: auto;
 }
+
+#notification-counter {
+  background-color: rgb(212, 78, 3);
+  color: #fff;
+  border-radius: 3px;
+  padding: 1px 3px;
+  font: 13px Verdana;
+  position: absolute;
+  right: 14%;
+  top: 20%;
+}
+
+div#notificationsBody {
+    overflow-y: scroll;
+    height: 200px;
+}
+
+a#false .dropdown-item {
+    background: #02020214;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+a#userDropdown {
+    position: relative;
+}
+
+h6#text {
+  color: blue;
+}
+
+div#notificationTitle {
+    font-size: 24px;
+    text-align: center;
+    border-bottom: 1px solid #e4dbdbed;
+}

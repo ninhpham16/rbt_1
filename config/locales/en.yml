@@ -124,6 +124,9 @@ en:
         showtime: "Show time"
         seat: "Seat"
         total: "Total"
+    notifications:
+      notification:
+        check: "Check now"
     users:
       user:
         confirm: Block this user
@@ -266,6 +269,9 @@ en:
         success: "Update showtime successfully!"
       create:
         success: "Create showtime successfully!"
+      show:
+        seat: "Seat id"
+        status: "Status"
 
 
     movies:
@@ -322,9 +328,9 @@ en:
         button: "Submit"
       new:
         title: "Create Room"
-        button: "Create"
       form:
         title: "Create Room"
+        button: "Create"
       show:
         greeting: "Show room %{room} of %{theater} theater"
         index: "Back to index"

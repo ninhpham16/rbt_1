@@ -32,3 +32,5 @@
 //= require Chart.bundle
 //= require manager/movie_theaters
 //= require manager/categories
+//= require cable.js
+//= require manager/notificationscenter

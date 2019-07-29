@@ -21,3 +21,5 @@
 //= require ckeditor/init
 //= require magnific-popup
 //= require popup
+//= require cable.js
+//= require manager/notificationscenter
