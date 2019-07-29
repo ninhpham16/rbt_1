@@ -1,16 +1,30 @@
 .container.index-showtimes
   h1 = t".title"
-  table.table.table-condensed
-    thead
-      tr
-        th = t".time"
-        th = t".theat"
-        th = t".mo"
-        th = t".ro"
-        th = t".ac"
-    tbody#showtime-body
-      = render partial: "movie_theater", collection: @movie_theaters, as: :movie_theater
-    table
-    = link_to t(".add"), new_manager_movie_theater_path, remote: true, class: "btn btn-success"
-= paginate @movie_theaters, theme: "twitter-bootstrap-4"
+  = link_to t(".add"), new_manager_movie_theater_path, remote: true, class: "btn btn-success"
+  //DataTable
+  .table
+  #dataTable_wrapper.dataTables_wrapper
+    .row
+      .col-sm-12.col-md-6
+        #dataTable_length.dataTables_length
+      .col-sm-12.col-md-6
+        #dataTable_filter.dataTables_filter
+    br
+    table#movie_theater.table.table-bordered.dataTable.table-striped.table-hover
+      thead#movie_theater-t
+        tr role="row"
+          th.sorting 
+            = t(".time")
+          th.sorting 
+            = t(".theat")
+          th.sorting 
+            = t(".mo")
+          th.sorting 
+            = t(".ro")
+          th 
+            = t(".ac")                                        
+      tbody#showtime-body
+        = render @movie_theaters
+
 #showtimeModal
+

@@ -44,7 +44,6 @@ Rails.application.routes.draw do
     resources :imports
   end
 
-
   resources :movies, only: [:show, :index]
   resources :cities, only: [:index, :show]
   resources :users, only: [:show, :edit, :update]

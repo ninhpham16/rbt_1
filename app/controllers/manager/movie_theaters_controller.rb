@@ -5,7 +5,7 @@ module Manager
     before_action :order, only: %i[create update]
 
     def index
-      @movie_theaters = MovieTheater.all.page(params[:page]).per Settings.per_page_movie_theaters
+      @movie_theaters = MovieTheater.all
     end
 
     def new

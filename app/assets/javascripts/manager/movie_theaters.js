@@ -12,3 +12,15 @@ function myGetrooms(rooms){
     });
   });
 }
+
+function initDataTableMovieTheater(){
+  $("#movie_theater").DataTable({
+   destroy: true,
+   order: []
+  });
+}
+
+$(document).ready(function() {
+  $("#movie_theater").DataTable();
+  initDataTableMovieTheater();
+});
