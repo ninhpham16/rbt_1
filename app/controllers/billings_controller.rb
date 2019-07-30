@@ -17,11 +17,9 @@ class BillingsController < ApplicationController
 
       card_token = params[:stripeToken]
       format.html { redirect_to billings_path, error: "Oops" } if card_token.nil?
-
       customer = Stripe::Customer.new current_user.stripe_id
       customer.source = card_token
       customer.save
-
       format.html { redirect_to success_path }
     end
   end

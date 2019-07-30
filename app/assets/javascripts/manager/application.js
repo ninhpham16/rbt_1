@@ -14,6 +14,8 @@
 //= require rails-ujs
 //= require lib/popper.min
 //= require lib/jquery.min
+//= require lib/html5-qrcode.min
+//= require lib/jsqrcode-combined.min
 //= require lib/animsition.min
 //= require lib/bootstrap.bundle.min
 //= require lib/bootstrap.min

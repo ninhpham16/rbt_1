@@ -231,7 +231,15 @@ en:
         success: "Create city successfully!"
       form:
         button: "Create"
-
+    orders:
+      index:
+        startScan: "Scan"
+      show:
+        qrcode: "QR CODE"
+        total: "Total"
+    scanners:
+      new:
+        titleScanner: "Scan QR code"
     movie_theaters:
       new:
         title: "Create Showtime"

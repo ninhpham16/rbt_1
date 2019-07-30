@@ -10,6 +10,12 @@ class Order < ApplicationRecord
     total
   end
 
+  def generate_qr
+    require "google-qr"
+    qr = GoogleQR.new(data: id.to_s, size: "200x200", margin: 4, error_correction: "L")
+    qr.to_s
+  end
+
   private
 
   def update_total

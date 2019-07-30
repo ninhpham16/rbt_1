@@ -13,7 +13,7 @@ user = User.create!(name: "Winfrey",
              password_confirmation: "123456"
             )
 
-50.times do |n|
+10.times do |n|
 name  = Faker::Name.name
 email = "ex-#{n+1}@gmail.com"
 password = 123456
@@ -47,7 +47,8 @@ end
   category = Category.first
   Movie.create!(name: name,
                 available: true,
-                category: category)
+                category: category,
+                trailer: "https://www.youtube.com/watch?v=Nt9L1jCKGnE")
 end
 time = Faker::Time.between(DateTime.now - 1, DateTime.now)
 
