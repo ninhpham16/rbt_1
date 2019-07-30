@@ -32,6 +32,7 @@ gem "dotenv-rails"
 gem "sidekiq"
 gem "ckeditor", "4.1.3"
 gem "roo"
+gem "magnific-popup-rails"
 group :development, :test do
   gem "faker"
   gem "pry-rails"

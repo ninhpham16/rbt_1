@@ -19,3 +19,5 @@
 //= require lib/jquery.raty
 //= require lib/slick.min
 //= require ckeditor/init
+//= require magnific-popup
+//= require popup
