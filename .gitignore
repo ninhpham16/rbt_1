@@ -33,3 +33,4 @@ config/environments/*.local.yml
 /public/system/*
 config/credentials.yml.enc
 .env
+vendor/bundle

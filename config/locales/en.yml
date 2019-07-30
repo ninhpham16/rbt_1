@@ -40,6 +40,9 @@ en:
     welcome_send:
       user: "User Profile"
       welcome: "Welcome to my site"
+    mail_month:
+      title: "Movie of the month"
+      
   order_mailer:
     ordered: "You have successfully ordered"
     order_mail: 
