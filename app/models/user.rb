@@ -12,6 +12,6 @@ class User < ApplicationRecord
   end
 
   def welcome_send
-    HardWorker.perform_async(id)
+    HardWorker.perform_async(self.id)
   end
 end

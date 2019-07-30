@@ -63,7 +63,7 @@ p {
 h1, h2, h3, h4, h5, h6, figure {
   text-align: center;
   font-size: 35px;
-  color: #000;
+  color: #fff;
   font-family: "Lato", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
@@ -140,7 +140,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .gtco-nav ul li a {
   font-size: 16px;
   padding: 30px 10px;
-  color: rgba(255, 255, 255, 0.7);
+  color: white;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -1491,7 +1491,7 @@ form label {
 .form-control {
   box-shadow: none;
   background: transparent;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.55);
   border-radius: 5px;
   color: black;
   height: 46px;
