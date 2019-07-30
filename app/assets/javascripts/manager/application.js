@@ -29,3 +29,4 @@
 //= require chartkick
 //= require Chart.bundle
 //= require manager/movie_theaters
+//= require manager/categories
