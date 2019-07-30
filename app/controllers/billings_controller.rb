@@ -34,9 +34,13 @@ class BillingsController < ApplicationController
                                      description: "Payments",
                                      currency: "usd"
     @payment.save
-    OrderMailer.order_mail(order, current_user).deliver_now if current_user.present?
     order.order_status = true
+    chart = GoogleQR.new(data: order.id.to_s, size: "250x250", margin: 4, error_correction: "L").to_s
+    order.chart = chart
     order.save
+    qr_code_img = RQRCode::QRCode.new(order.id.to_s, level: :h).to_img.resize(200, 200)
+    order.update_attribute :image, qr_code_img.to_string
+    OrderMailer.order_mail(order, current_user).deliver_now if current_user.present?
     paid_seats = order.order_items.first.movie_theater.showtime_seats
                       .where(seat_id: order.order_items.pluck(:seat_id))
     paid_seats.each do |seat|
