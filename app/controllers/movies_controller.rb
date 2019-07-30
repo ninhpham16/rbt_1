@@ -6,7 +6,7 @@ class MoviesController < ApplicationController
 
   def show
     @movie = Movie.find params[:id]
-    @reviews = @movie.reviews.order("created_at asc")
     @review = @movie.reviews.build
+    @support = Supports::Movie.new
   end
 end

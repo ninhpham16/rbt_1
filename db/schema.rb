@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_26_011310) do
+ActiveRecord::Schema.define(version: 2019_07_26_174149) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -34,6 +34,17 @@ ActiveRecord::Schema.define(version: 2019_07_26_011310) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "movie_id"
+    t.integer "parent_id"
+    t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["movie_id"], name: "index_comments_on_movie_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "movie_theaters", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -149,6 +160,8 @@ ActiveRecord::Schema.define(version: 2019_07_26_011310) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "comments", "movies"
+  add_foreign_key "comments", "users"
   add_foreign_key "movie_theaters", "movies"
   add_foreign_key "movie_theaters", "theaters"
   add_foreign_key "movies", "categories"

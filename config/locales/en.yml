@@ -332,3 +332,15 @@ en:
     imports:
       create:
         success: "Import successfully !"
+  comments:
+    comment:
+      add: "Add by "
+      on: " on "
+      reply: "Reply "
+    new:
+      comment: "Comment"
+      btn: "Add Comment"
+    reply_new:
+      btn: "Add Reply"
+      reply: "Reply"
+
