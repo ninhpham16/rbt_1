@@ -26,7 +26,7 @@
           td = t(".seat")  
           td 
             - @order.order_items.each do |ot|
-              = ot.seat.name 
+              span = ot.seat.name 
           end
         tr
           td = t(".total")  

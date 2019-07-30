@@ -47,10 +47,17 @@
     td:first-child{
       font-weight: bold;
     }
+    span {
+      margin-right: 10px;
+    }
   }
 }
 .index-orders{
-  background-color: #f8f8f8 !important;
+  padding-top: 60px;
+  background-image: url('star.jpg') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   box-shadow: none !important;
   .row{
     margin-top: 20px;
@@ -61,14 +68,22 @@
     text-transform: uppercase;
     margin-bottom: 35px;
   }
-  h4{
-    text-align: left;
-    text-transform: uppercase;
-    margin: 0 !important;
+  .container{
+    background: none;
   }
-  p{
-    font-size: 18px;
-    color: #000;
+  span{
+    margin-right: 8px;
+  }
+  span, p, strong{
+    font-size: 16px;
+    color: #a6b2c9 !important;
     font-family: sans-serif;
   }
+  ul.pagination{
+    padding-bottom: 40px;
+  }
+  p.title{
+    text-transform: uppercase;
+  }
 }
+
