@@ -34,7 +34,11 @@ gem "ckeditor", "4.1.3"
 gem "roo"
 gem "magnific-popup-rails"
 gem "whenever", require: false
+gem "rqrcode_png"
 gem "google-qr"
+gem "dragonfly"
+gem "mini_magick"
+
 group :development, :test do
   gem "faker"
   gem "pry-rails"

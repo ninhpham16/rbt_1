@@ -1,5 +1,7 @@
 module Manager
   class OrdersController < Manager::BaseController
+    require "google-qr"
+    require "rqrcode_png"
     skip_before_action :verify_authenticity_token
 
     def index
