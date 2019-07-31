@@ -1,3 +1,4 @@
+= link_to t(".startScan"), new_manager_scanner_path, remote: true, id: "btnStart", class: "btn btn-danger ml-4"
 .container-fluid
   .card.shadow.mb-4
     .card-header.py-3
@@ -27,4 +28,5 @@
                   = render @orders          
             .col-sm-12.col-md-7
               #dataTable_paginate.dataTables_paginate.paging_simple_numbers
+#myReader
 #myIndex

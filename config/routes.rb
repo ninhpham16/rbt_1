@@ -38,6 +38,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:index, :destroy]
     resources :orders
     resources :showtime_seats
+    resources :scanners, only: [:new]
   end  
 
   namespace :importfile do

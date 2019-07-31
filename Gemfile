@@ -34,6 +34,7 @@ gem "ckeditor", "4.1.3"
 gem "roo"
 gem "magnific-popup-rails"
 gem "whenever", require: false
+gem "google-qr"
 group :development, :test do
   gem "faker"
   gem "pry-rails"

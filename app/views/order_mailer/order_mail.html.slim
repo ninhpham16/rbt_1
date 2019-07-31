@@ -29,7 +29,9 @@
                     div style="color:#3696c2;text-decoration:underline;"
                       = link_to "no_reply@ruby-dev.vn", "ruby-dev.vn"
       tr style="font-family:Verdana,Arial;font-weight:normal;border-collapse:collapse;vertical-align:top;padding:0;margin:0;background:#e1f0f8;text-align:center;width:100%"
-        h3 style="font-family:Verdana,Arial;font-weight:normal;font-size:17px;margin-bottom:10px;margin-top:15px"Your Order: #{@order.id}
+        h3 style="font-family:Verdana,Arial;font-weight:normal;font-size:17px;margin-bottom:10px;margin-top:15px"Your Order: 
+        br
+        = image_tag "#{@order.generate_qr}", alt: "qrcode"
       tr
         td
           table style="border-collapse:collapse;padding:10px 15px;margin:0;width:100%"
