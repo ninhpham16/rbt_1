@@ -353,6 +353,12 @@ en:
       pay: "Do you want to pay ?"
       let: "Let's go"
     success:
+      name: "Name: "
+      email: "Email: "
+      movie: "Movie: "
+      showtime: "Showtime: "
+      seat: "Seat: "
+      total: "Total: "
       pay: "Payment"
       success: "You successfully linked a credit card to your account"
     payment:
