@@ -2,9 +2,11 @@ class Order < ApplicationRecord
   belongs_to :user
   has_many :order_items, dependent: :destroy
   accepts_nested_attributes_for :order_items, allow_destroy: true, reject_if: proc { |attr| attr[:seat_id].blank? }
+  has_one  :notification
   before_save :update_total
   validates :total, numericality: { greater_than: 0 }
   dragonfly_accessor :image
+  after_create_commit { notify }
 
   def total
     total = order_items.length * 50_000
@@ -23,6 +25,10 @@ class Order < ApplicationRecord
 
   private
 
+  def notify
+    Notification.create(event: "New order")
+  end
+  
   def update_total
     self[:total] = total
   end

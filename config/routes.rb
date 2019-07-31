@@ -39,6 +39,10 @@ Rails.application.routes.draw do
     resources :orders
     resources :showtime_seats
     resources :scanners, only: [:new]
+    resources :notifications
+    mount ActionCable.server => '/cable'
+    get 'notifications/:id/check', to: 'notifications#check_read',
+                                      as: :check_read
   end  
 
   namespace :importfile do
@@ -58,4 +62,5 @@ Rails.application.routes.draw do
   require 'sidekiq/web'
   mount Sidekiq::Web => "/sidekiq"
   resources :comments
+  resources :notifications
 end

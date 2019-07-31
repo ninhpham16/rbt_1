@@ -75,4 +75,6 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.stripe.secret_key = ENV['secret_key']
   config.stripe.publishable_key = ENV['publishable_key']
+  config.action_cable.url = "ws://localhost:3000/cable"
+  config.action_cable.allowed_request_origins = [/http:\/\/*/, /https:\/\/*/]
 end

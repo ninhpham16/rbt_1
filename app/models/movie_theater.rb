@@ -7,6 +7,7 @@ class MovieTheater < ApplicationRecord
   validates :time, presence: true
   validate :check_room, on: :update
 
+  validates :time, presence: true
   scope :date_like, ->(date) { where "time LIKE ?", "%#{date}%" }
   scope :movie_like, ->(movie_id) { where "movie_id = ?", movie_id.to_s }
   private
