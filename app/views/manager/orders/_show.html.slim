@@ -23,9 +23,3 @@
                 = t(".qrcode")
           tbody
             = render "item", order: @order
-            = render partial: "item", collection: @order_items, as: :item
-            td 
-              = t(".total")
-            td 
-              = order.total
-            = image_tag @order.image.url

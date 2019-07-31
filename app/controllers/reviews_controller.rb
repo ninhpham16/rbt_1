@@ -5,6 +5,7 @@ class ReviewsController < ApplicationController
     @review = current_user.reviews.build(review_params)
     @review.save
     @reviews = @movie.reviews
+    @support = Supports::Movie.new
   end
 
   def destroy
