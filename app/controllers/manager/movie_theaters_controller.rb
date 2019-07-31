@@ -34,6 +34,7 @@ module Manager
 
     def edit
       @support_movie_theater = Support::MovieTheater.new
+      @theater = @movie_theater.theater
     end
 
     def show
@@ -49,7 +50,9 @@ module Manager
           format.js
         end
       else
-        render "edit"
+        @theater = @movie_theater.theater
+        @support_movie_theater = Support::MovieTheater.new
+        render "form"
       end
     end
 

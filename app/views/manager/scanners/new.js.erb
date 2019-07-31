@@ -1,7 +1,7 @@
 $("#myReader").html("<%= j render 'new' %>");
 $("#scannerModalNew").modal("show");
-
 $('#reader').html5_qrcode(function(data){
+  $('#beep')[0].play();
   alert('The order id is '+qrcode.result);
   $('#reader').html5_qrcode_stop();
   $.ajax({

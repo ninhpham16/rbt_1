@@ -11,6 +11,10 @@ class Order < ApplicationRecord
     total
   end
 
+  def order_email_send
+    OrderWorker.perform_async(user_id, id)
+  end
+
   def generate_qr
     require "google-qr"
     qr = GoogleQR.new(data: id.to_s, size: "200x200", margin: 4, error_correction: "L")
