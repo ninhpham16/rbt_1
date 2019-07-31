@@ -24,7 +24,10 @@ class BillingsController < ApplicationController
     end
   end
 
-  def success; end
+  def success
+    @order = current_user.orders.last
+    @order_items = @order.order_items
+  end
 
   def payment
     customer = Stripe::Customer.new current_user.stripe_id

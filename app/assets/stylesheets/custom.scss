@@ -530,12 +530,14 @@ div#index-city.payment {
 }
 
 div#index-city.success {
-  height: 219px;
+  height: 570px;
 }
 
 input#success-payment {
-  width: 80%
+  width: 70%;
+  margin-left: 184px;
 }
+
 .comment_nested{
   margin-left: 20px;
 }
@@ -561,6 +563,22 @@ input#success-payment {
   padding-left: 15px;
   padding-right: 15px;
 }
+
 .slick-slide img {
    height: 431px;
+}
+
+.ticket__content#successful {
+  color: white;
+  border-top-width: 0px;
+  border-bottom-width: 0px
+}
+
+#name_email {
+  color: wheat;
+  font-size: 30px;
+}
+
+#you-success {
+  margin-left: 40px;
 }
