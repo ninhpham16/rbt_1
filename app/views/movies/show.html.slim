@@ -40,8 +40,9 @@
     .container
       #show_showtime
     .container
-      - if current_user != nil
-        = render @support.rate(@movie, current_user)
+      #show_rate
+        - if current_user != nil
+          = render @support.rate(@movie, current_user)
     #review-form
       = render "reviews/form", review: @review
     center

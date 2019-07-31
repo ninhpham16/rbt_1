@@ -35,8 +35,7 @@ class BillingsController < ApplicationController
                                      currency: "usd"
     @payment.save
     order.order_status = true
-    chart = GoogleQR.new(data: order.id.to_s, size: "250x250", margin: 4, error_correction: "L").to_s
-    order.chart = chart
+    order.chart = order.generate_qr
     order.save
     qr_code_img = RQRCode::QRCode.new(order.id.to_s, level: :h).to_img.resize(200, 200)
     order.update_attribute :image, qr_code_img.to_string

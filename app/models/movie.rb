@@ -10,4 +10,5 @@ class Movie < ApplicationRecord
   validates_attachment :image,
                        content_type: { content_type: %r{\Aimage/.*\z} },
                        size: { less_than: 1.megabyte }
+  validates :trailer, format: { with: /^#{URI::DEFAULT_PARSER.make_regexp.to_s}$/, multiline: true }
 end
