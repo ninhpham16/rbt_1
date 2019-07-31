@@ -7,7 +7,7 @@
       - else 
         = image_tag "https://image2.tin247.com/pictures/2019/07/05/baw1562286616.jpg"
   .fh5co-text
-    p#text 
+    = link_to movie_path(movie), id: "text"
       = movie.name
   .btn-ticket
       = link_to movie_path(movie), class: "btn-text"

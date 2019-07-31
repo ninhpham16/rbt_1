@@ -251,7 +251,7 @@ a.btn.btn-light.text-muted.date {
 .fh5co-text {
   height: 100px;
   text-align: center;
-  p{
+  a{
     color: #45ab3d !important; 
     font-weight: bold;
     text-shadow: 0.1em 0.1em 0.2em #000; 
@@ -474,31 +474,6 @@ footer#gtco-footer{
   }
 }
 
-.index-orders{
-  padding-top: 60px;
-  background-image: url('star.jpg') !important;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  .container{
-    background: none;
-  }
-  h4, p, span{
-    color: #a6b2c9 !important;
-  }
-  h4{
-    font-size: 30px;
-  }
-  span{
-    margin-right: 8px;
-  }
-  span, p{
-    font-size: 14px;
-  }
-  ul.pagination{
-    padding-bottom: 40px;
-  }
-}
 
 .show-theater{
   background-image: url('star.jpg') !important;
