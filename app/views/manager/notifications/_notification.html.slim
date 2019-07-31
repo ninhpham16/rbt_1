@@ -4,6 +4,6 @@
       | #{notification.id} 
       = notification.event
       span
-        = notification.created_at.strftime("%d/%m/%Y, %H:%M")
+        = notification.created_at.utc.localtime.strftime("%d/%m/%Y, %H:%M")
     h6#text.far.fa-arrow-alt-circle-right
       |  #{t(".check")}

@@ -11,7 +11,7 @@ tr
     - else
       = t(".success")
   td
-    = order.created_at.strftime("%d/%m/%Y, %H:%M")
+    = order.created_at.utc.localtime.strftime("%d/%m/%Y, %H:%M")
   td
     = link_to manager_order_path(order), remote: true, class: "btn btn-info mr-5" do
       = t(".details") 

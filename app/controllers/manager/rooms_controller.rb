@@ -27,8 +27,9 @@ module Manager
           format.js
         end
       else
-        flash[:danger] = t ".failed"
-        render :new
+        @theater = Theater.new
+        @supports = Supports::Theater.new
+        render "form"
       end
     end
 

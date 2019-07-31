@@ -111,7 +111,6 @@ en:
         confirm: "Are you sure?"
         pending: "Pending"
         success: "Success"
-
       index:
         name: "User name"
         city-theater: "City - Theater"
@@ -237,6 +236,8 @@ en:
       show:
         qrcode: "QR CODE"
         total: "Total"
+      item:
+        pay: "Not paid yet"
     scanners:
       new:
         titleScanner: "Scan QR code"
@@ -325,6 +326,7 @@ en:
         button: "Create"
       form:
         title: "Create Room"
+        button: "Create"
       show:
         greeting: "Show room %{room} of %{theater} theater"
         index: "Back to index"
