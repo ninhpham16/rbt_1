@@ -1,4 +1,4 @@
-$("#showtimeModal").html("<%= j render 'new' %>")
+$("#showtimeModal").html("<%= j render 'new', smt: @support_movie_theater%>")
 $("#showtimeModalNew").modal("show")
 var rooms = $('#movie_theater_room_id').html();
 myGetrooms(rooms);

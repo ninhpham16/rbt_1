@@ -22,7 +22,9 @@ module Manager
           format.js
         end
       else
-        render "new"
+        @theater = @movie_theater.theater
+        @support_movie_theater = Support::MovieTheater.new
+        render "form"
       end
     end
 
@@ -41,6 +43,8 @@ module Manager
       @movie_theater = MovieTheater.find params[:id]
       @showtime_seats = @movie_theater.showtime_seats
       find_seats @showtime_seats
+      slot = ShowtimeSeat.where(id: @seats)
+      @chair = slot.pluck(:seat_id)
     end
 
     def update
