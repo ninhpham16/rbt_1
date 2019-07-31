@@ -5,7 +5,7 @@ module Manager
     before_action :order, only: %i[create update]
 
     def index
-      @cities = City.all.page(params[:page]).per Settings.per_page_cities
+      @cities = City.order(updated_at: :desc).page(params[:page]).per Settings.per_page_cities
     end
 
     def new
@@ -14,13 +14,14 @@ module Manager
 
     def create
       @city = City.new city_params
+      @cities = City.order(updated_at: :desc).page(params[:page]).per Settings.per_page_cities
       if @city.save
         respond_to do |format|
           format.html
           format.js
         end
       else
-        render "new"
+        render "form"
       end
     end
 

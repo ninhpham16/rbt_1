@@ -106,6 +106,24 @@ en:
       AYS: "Are you sure?"
       
   manager:
+    orders:
+      order:
+        confirm: "Are you sure?"
+        pending: "Pending"
+        success: "Success"
+
+      index:
+        name: "User name"
+        city-theater: "City - Theater"
+        status: "Status"
+        time: "Ordered time"
+        action: "Action"
+      show:
+        name: "Movie name"
+        room: "Room"
+        showtime: "Show time"
+        seat: "Seat"
+        total: "Total"
     users:
       user:
         confirm: Block this user
@@ -182,6 +200,8 @@ en:
         success: "Create category successfully!"
       import:
         success: "Import category successfully!"
+      form: 
+        button: "Create"
 
     cities:
       create:
@@ -209,6 +229,8 @@ en:
         success: "Update city successfully!"
       create:
         success: "Create city successfully!"
+      form:
+        button: "Create"
 
     movie_theaters:
       new:

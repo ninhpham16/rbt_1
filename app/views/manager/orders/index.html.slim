@@ -11,14 +11,16 @@
               table#theater.table.table-bordered.dataTable.table-striped.table-hover
                 thead#theater-t
                   tr role="row"
-                    th.sorting style="width: 10%;" 
+                    th.sorting style="width: 5%;" 
                       = t(".id")
-                    th.sorting style="width: 150px;" 
-                      = t(".city")
-                    th.sorting style="width: 150px;" 
-                      = t(".date")
+                    th.sorting style="width: 25%;" 
+                      = t(".name")
                     th.sorting style="width: 20%;" 
-                      = t(".theater")
+                      = t(".city-theater")
+                    th.sorting style="width: 10%;" 
+                      = t(".status")
+                    th.sorting style="width: 50px;" 
+                      = t(".time")
                     th style="width: 20%;"
                       = t(".action")                                        
                 tbody#theater-table

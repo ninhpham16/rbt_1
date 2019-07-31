@@ -19,13 +19,14 @@ module Manager
 
     def create
       @category = Category.new category_params
+      @categories = Category.order(updated_at: :desc).page(params[:page]).per Settings.per_page_categories
       if @category.save
         respond_to do |format|
           format.html
           format.js
         end
       else
-        render "new"
+        render "form"
       end
     end
 

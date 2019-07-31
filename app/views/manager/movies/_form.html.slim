@@ -1,5 +1,6 @@
 .col-md-9.col-md-offset-3
   = form_for [:manager, @movie], remote: true do |f|
+    = render "shared/error_messages", object: f.object
     .field
       = f.label :name, t(".name")
       = f.text_field :name, class: "form-control"
@@ -7,9 +8,11 @@
     .field
       = f.label :aivailable, t(".available")
       = f.check_box :available
-      .
-        = f.label :category_id
-        = f.select(:category_id, options_from_collection_for_select(@categories, :id, :name), include_blank: t(".select"))
+    .field
+      = f.label :category_id
+    .field
+      = f.select(:category_id, options_from_collection_for_select(@categories, :id, :name), include_blank: t(".select"))
+    br
     .field
       = f.label :director, t(".director")
       = f.text_field :director, class: "form-control"
@@ -18,7 +21,7 @@
       = f.text_field :actor, class: "form-control"
     .form-group
       = f.label :release
-      = f.text_field :release, class: "form-control", id: "datetimepicker" 
+      = f.text_field :release, class: "form-control", id: "datetimepicker", autocomplete: :off 
     .field
       = f.label :rated, t(".rated")
       = f.text_field :rated, class: "form-control"
