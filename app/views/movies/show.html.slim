@@ -24,9 +24,9 @@
           = @movie.actor
         p         
           = t ".release"
-          = @movie.release
+          = @movie.release.utc.localtime.strftime("%d/%m/%Y")
         p
-          = t "rated"
+          = t ".rated"
           = @movie.rated
         p
           = t ".descrip"

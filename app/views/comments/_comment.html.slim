@@ -8,7 +8,7 @@
       = l(comment.created_at, format: '%B, %d %Y %H:%M:%S')
     blockquote
       p
-        = comment.content
+        = simple_format(comment.content)
       = link_to t(".reply"),reply_new_path(comment: comment.id, movie: @movie.id), remote: true
     - @support.findReply(@support.comment_id(@support.findComment(@movie))).each do |reply|
       - if reply.parent_id == comment.id
@@ -21,5 +21,5 @@
             = l(reply.created_at, format: '%B, %d %Y %H:%M:%S')
           blockquote
             p
-              = reply.content
+              = simple_format(reply.content)
       
