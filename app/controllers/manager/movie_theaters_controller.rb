@@ -10,7 +10,7 @@ module Manager
 
     def new
       @movie_theater = MovieTheater.new
-      @support_movie_theater = Support::MovieTheater.new
+      @support_movie_theater = Supports::MovieTheater.new
     end
 
     def create
@@ -23,7 +23,7 @@ module Manager
         end
       else
         @theater = @movie_theater.theater
-        @support_movie_theater = Support::MovieTheater.new
+        @support_movie_theater = Supports::MovieTheater.new
         render "form"
       end
     end
@@ -35,7 +35,7 @@ module Manager
     end
 
     def edit
-      @support_movie_theater = Support::MovieTheater.new
+      @support_movie_theater = Supports::MovieTheater.new
       @theater = @movie_theater.theater
     end
 
@@ -56,7 +56,7 @@ module Manager
         end
       else
         @theater = @movie_theater.theater
-        @support_movie_theater = Support::MovieTheater.new
+        @support_movie_theater = Supports::MovieTheater.new
         render "form"
       end
     end
@@ -100,10 +100,10 @@ module Manager
     def update_showtime_seats room_id, movie_theater_id
       @room = Room.find room_id
       showtime_seats = MovieTheater.find(movie_theater_id).showtime_seats
-      @room.seats.each_with_index do |seat,index|
-          showtime_seats[index].seat_id = seat.id
-          showtime_seats[index].seat_available = seat.available
-          showtime_seats[index].save
+      @room.seats.each_with_index do |seat, index|
+        showtime_seats[index].seat_id = seat.id
+        showtime_seats[index].seat_available = seat.available
+        showtime_seats[index].save
       end
     end
   end

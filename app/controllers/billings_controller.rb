@@ -1,5 +1,6 @@
 class BillingsController < ApplicationController
   before_action :authenticate_user!
+  skip_before_action :verify_authenticity_token
   def index; end
 
   def new_card
@@ -40,9 +41,10 @@ class BillingsController < ApplicationController
     order.order_status = true
     order.chart = order.generate_qr
     order.save
+    # OrderMailer.order_mail(order, current_user).deliver_now if current_user.present?
+    order.order_email_send
     qr_code_img = RQRCode::QRCode.new(order.id.to_s, level: :h).to_img.resize(200, 200)
     order.update_attribute :image, qr_code_img.to_string
-    order.order_email_send
     paid_seats = order.order_items.first.movie_theater.showtime_seats
                       .where(seat_id: order.order_items.pluck(:seat_id))
     paid_seats.each do |seat|
