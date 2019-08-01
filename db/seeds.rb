@@ -13,9 +13,9 @@ user = User.create!(name: "Winfrey",
              password_confirmation: "123456"
             )
 
-10.times do |n|
+100.times do |n|
 name  = Faker::Name.name
-email = "ex-#{n+1}@gmail.com"
+email = Faker::Internet.unique.email
 password = 123456
 User.create!(name: name,
             email: email,
@@ -23,7 +23,8 @@ User.create!(name: name,
             phone_number: "0964980884", 
             address: "America",
             password: password,
-            password_confirmation: password
+            password_confirmation: password,
+            created_at: Faker::Date.between(1.weeks.ago, Date.today)
             )
 end
 
@@ -42,13 +43,14 @@ room2 = Room.create!(name: "Spring_HCM", theater_id: Theater.second.id)
   Category.create!(name: name)
 end
 
-10.times do |n|
-  name = Faker::Movie.unique.quote
+50.times do |n|
+  name = Faker::Games::Pokemon.unique.name
   category = Category.first
   Movie.create!(name: name,
                 available: true,
                 category: category,
-                trailer: "https://www.youtube.com/watch?v=Nt9L1jCKGnE")
+                trailer: "https://www.youtube.com/watch?v=Nt9L1jCKGnE",
+                created_at: Faker::Date.between(12.months.ago, Date.today))
 end
 time = Faker::Time.between(DateTime.now - 1, DateTime.now)
 
@@ -97,14 +99,14 @@ end
   City.create!(name:  name)
 end
 
-2.times do |n|
+5.times do |n|
   name = Faker::Name.name
   city = City.all.sample
   Theater.create!(name: name,
                   city: city)
 end
 
-5.times do |n|
+50.times do |n|
   user = User.all.sample
   total = Faker::Number.number(5)
   Order.create!( user: user,
@@ -115,5 +117,5 @@ end
 movie = MovieTheater.all.sample
 orders = Order.take(50)
 5.times do |n|
-  orders.each { |order| order.order_items.create!(movie_theater: movie, seat: Seat.first) } 
+  orders.each { |order| order.order_items.create!(movie_theater: movie, seat: Seat.first, created_at: Faker::Date.between(2.weeks.ago, Date.today)) } 
 end
