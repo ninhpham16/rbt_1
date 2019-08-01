@@ -20,7 +20,7 @@ password = 123456
 User.create!(name: name,
             email: email,
             full_name: "Oprah Winfrey",
-            phone_number: "0964980884", 
+            phone_number: "0964980884",
             address: "America",
             password: password,
             password_confirmation: password,
@@ -96,8 +96,9 @@ end
 movies = Movie.all
 2.times do |n|
   movies.each do |movie|
-    movie_theater = movie.movie_theaters.create!( theater_id: Theater.all.sample.id, room_id: Room.all.sample.id, time: Faker::Time.between(7.days.ago, Date.today)
-      )
+    theater = Theater.all.sample
+    movie_theater = movie.movie_theaters.create!( theater_id: theater.id,
+      room_id: theater.rooms.sample.id, time: Faker::Time.between(7.days.ago, Date.today))
     create_showtime_seats movie_theater.room_id, movie_theater.id
   end
 end
