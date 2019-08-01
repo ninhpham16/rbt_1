@@ -36,6 +36,6 @@ class StaticPagesController < ApplicationController
 
   def show_showtime
     @movie_theaters = Theater.find(params[:theater]).movie_theaters
-                             .where(movie_id: params[:movie].to_i).date_like(params[:date])
+                             .where(movie_id: params[:movie].to_i).date_like(params[:date]).order(time: :asc)
   end
 end

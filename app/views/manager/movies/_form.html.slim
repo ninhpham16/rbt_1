@@ -34,4 +34,4 @@
     .field
       = f.label :image, t(".image")
       = f.file_field :image, class: "form-control"
-    = f.submit t(".create"), class: "btn btn-primary"
+    = f.submit yield(:button_text), class: "btn btn-primary"
