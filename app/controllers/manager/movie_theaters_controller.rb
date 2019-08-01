@@ -49,6 +49,7 @@ module Manager
 
     def update
       if @movie_theater.update movie_theater_params
+        update_showtime_seats @movie_theater.room_id, @movie_theater.id
         respond_to do |format|
           format.html
           format.js
@@ -94,6 +95,16 @@ module Manager
       seat_ids = showtime_seats.pluck(:seat_id)
       @seat_names = Seat.where(id: seat_ids).pluck(:name)
       @showtime_seats = ShowtimeSeat.where(id: @seats)
+    end
+
+    def update_showtime_seats room_id, movie_theater_id
+      @room = Room.find room_id
+      showtime_seats = MovieTheater.find(movie_theater_id).showtime_seats
+      @room.seats.each_with_index do |seat,index|
+          showtime_seats[index].seat_id = seat.id
+          showtime_seats[index].seat_available = seat.available
+          showtime_seats[index].save
+      end
     end
   end
 end
