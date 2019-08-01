@@ -1,4 +1,4 @@
-module Support
+module Supports
   class MovieTheater < ApplicationRecord
     attr_reader :theater, :movie, :room
 
@@ -18,7 +18,7 @@ module Support
       @cities ||= City.all
     end
 
-    def allTheaters
+    def all_theaters
       @all_theaters ||= Theater.all
     end
   end
