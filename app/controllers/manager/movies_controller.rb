@@ -33,11 +33,14 @@ module Manager
 
     def update
       if @movie.update movie_params
-        flash[:success] = t ".success"
+        respond_to do |format|
+          format.html
+          format.js
+        end
+        @movies = Movie.all.order(created_at: :desc)
       else
         flash[:danger] = t ".danger"
       end
-      redirect_to manager_movies_path
     end
 
     def destroy

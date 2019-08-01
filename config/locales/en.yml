@@ -294,6 +294,10 @@ en:
         update: "Update"
         delete: "Delete"
         new_movie: "New Movie"
+      edit:
+        button: "Update Movie"
+      new:
+        button: "Create a Movie"
 
     shared:
         create_movie: "Create Movie"
