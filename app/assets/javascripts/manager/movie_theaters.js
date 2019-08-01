@@ -12,7 +12,6 @@ function myGetrooms(rooms){
     });
   });
 }
-
 function initDataTableMovieTheater(){
   $("#movie_theater").DataTable({
    destroy: true,

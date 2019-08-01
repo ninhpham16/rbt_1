@@ -11,7 +11,7 @@ tr
   td
     = order.total
   td
-    - if !order.image == nil
+    - if !order.image.nil?
       = image_tag order.image.url
     - else
       = t(".pay")

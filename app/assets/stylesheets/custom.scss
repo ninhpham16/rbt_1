@@ -179,7 +179,7 @@ label#remember {
 
 .container1{
   margin-left: 2cm;
-  margin-bottom: 2cm
+  margin-top: 36px;
 }
 
 a.btn.btn-light.text-muted.date {
@@ -347,7 +347,7 @@ footer#gtco-footer{
     margin-top: 0px;
     padding-top: 20px;
     p{
-      font-size: 34.65px;
+      font-size: 20.65px;
       color: white;
       text-shadow: 0.1em 0.1em 0.2em #000; 
     } 
@@ -581,4 +581,8 @@ input#success-payment {
 
 #you-success {
   margin-left: 40px;
+}
+
+blockquote{
+  margin-bottom: 0 !important
 }
