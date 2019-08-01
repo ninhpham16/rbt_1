@@ -30,7 +30,7 @@
             td#first_col
               = "#{row}"
             - (1..6).each do
-              - if @pickedSeatArray.exclude? @seats[id][0]
+              - if @picked_seat_array.exclude? @seats[id][0]
                 = render "seat_active", f: f, id: id
               - else
                 = render "seat_picked", f: f, id: id
@@ -45,7 +45,7 @@
         .seat-picked
         span
           = t(".lblPicked")
-      = f.hidden_field :total, value: 0 
+      = f.hidden_field :total, value: 0
       = f.hidden_field :user_id, value: current_user.id
       = f.submit t(".booking"), id: "booking", class: "btn btn-primary"
-    
+

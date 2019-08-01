@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
 
   def new
     identify_room
-    findPickedSeats
+    find_picked_seats
     @order = Order.new
     @order.order_items.build
   end
@@ -45,8 +45,8 @@ class OrdersController < ApplicationController
     @seats = @room.seats.pluck(:id, :name, :available)
   end
 
-  def findPickedSeats
-    @pickedSeatArray = ShowtimeSeat.where(movie_theater_id:
+  def find_picked_seats
+    @picked_seat_array = ShowtimeSeat.where(movie_theater_id:
       params[:movie_theater_id], seat_available: false).pluck(:seat_id)
   end
 end

@@ -2,28 +2,28 @@ module Supports
   class Movie < ApplicationRecord
     attr_accessor :movie
 
-    def findReview movie
-      @reviews ||= movie.reviews.order("created_at asc")
+    def find_review movie
+      @find_review ||= movie.reviews.order("created_at asc")
     end
 
-    def newReview movie
-      @review ||= movie.reviews.build
+    def new_review movie
+      @new_review ||= movie.reviews.build
     end
 
-    def findComment movie
-      @comments ||= movie.comments.where(parent_id: nil).order(created_at: :desc)
+    def find_comment movie
+      @find_comment ||= movie.comments.where(parent_id: nil).order(created_at: :desc)
     end
 
     def comment_id comments
       @comment_id ||= comments.pluck(:id)
     end
 
-    def findReply comment_id
-      @replies ||= Comment.where(parent_id: comment_id)
+    def find_reply comment_id
+      @find_reply ||= Comment.where(parent_id: comment_id)
     end
 
-    def newComment
-      @comment ||= Comment.new
+    def new_comment
+      @new_comment ||= Comment.new
     end
 
     def rate movie, current_user

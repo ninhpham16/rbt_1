@@ -6,7 +6,7 @@ class MovieTheater < ApplicationRecord
   has_many :showtime_seats, dependent: :destroy
   validates :time, presence: true
   validates :theater_id, presence: true
-  validate :check_room, on: [:create, :update, :edit]
+  validate :check_room, on: %i[create update edit]
   scope :date_like, ->(date) { where "time LIKE ?", "%#{date}%" }
   scope :movie_like, ->(movie_id) { where "movie_id = ?", movie_id.to_s }
   private
