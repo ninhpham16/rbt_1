@@ -2,7 +2,7 @@ class MovieTheater < ApplicationRecord
   belongs_to :theater
   belongs_to :movie
   belongs_to :room
-  has_many :order_items, dependent: :destroy
+  has_many :order_items
   has_many :showtime_seats, dependent: :destroy
   validates :time, presence: true
   validates :theater_id, presence: true
