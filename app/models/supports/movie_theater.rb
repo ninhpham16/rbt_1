@@ -1,6 +1,6 @@
-module Support
+module Supports
   class MovieTheater < ApplicationRecord
-    attr_reader :theater, :movie, :room
+    attr_accessor :theater, :movie, :room, :city
 
     def theaters
       @theaters ||= Theater.pluck(:name, :id)

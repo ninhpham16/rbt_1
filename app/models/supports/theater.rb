@@ -1,6 +1,6 @@
 module Supports
   class Theater < ApplicationRecord
-    attr_reader :theater
+    attr_reader :theater, :city
 
     def initialize theater
       @theater = theater

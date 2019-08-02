@@ -19,7 +19,7 @@ class Order < ApplicationRecord
   end
 
   def order_email_send
-    OrderWorker.perform_async(user_id, id)
+    OrderWorker.perform_async(self.user_id, self.id)
   end
 
   def generate_qr
