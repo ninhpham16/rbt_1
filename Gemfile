@@ -44,6 +44,9 @@ group :development, :test do
   gem "pry-rails"
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   gem "rubocop-rails"
+  gem "rspec-rails", "~> 3.8"
+  gem "shoulda-matchers"
+  gem "simplecov"
 end
 
 group :development do
